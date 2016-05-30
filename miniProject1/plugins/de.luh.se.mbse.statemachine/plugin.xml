@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amf -->
+      <package
+            uri="http://www.amf.org/amf"
+            class="amf.AmfPackage"
+            genModel="model/amf.genmodel"/>
+   </extension>
+
+</plugin>

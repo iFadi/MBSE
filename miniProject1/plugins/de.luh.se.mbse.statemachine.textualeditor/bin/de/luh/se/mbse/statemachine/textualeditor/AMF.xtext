@@ -1,0 +1,58 @@
+grammar de.luh.se.mbse.statemachine.textualeditor.AMF with org.eclipse.xtext.common.Terminals
+
+generate amfRules  "http://www.amf.org/amf" 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Network returns Network:
+	'Network'
+	name=EString
+	'{'
+		(channel+=Channel (channel+=Channel)*)
+		(statemachine+=Statemachine (statemachine+=Statemachine)*)
+	'}' 
+;
+
+Statemachine returns Statemachine:
+	{Statemachine}
+	'Statemachine'
+	name=EString
+	'{'
+		'init' initialstate=[State|EString]
+			(state+=State (state+=State)*)?
+			(transition+=Transition (transition+=Transition)*)
+	'}'
+;
+
+EString returns ecore::EString:
+	STRING | ID
+;
+
+enum TypeOfChannel returns TypeOfChannel:
+	Synchronous = 'Synchronous' | Asynchronous = 'Asynchronous'
+;
+	
+Channel returns Channel:
+	{Channel}
+	(Type+=TypeOfChannel) 'Channel' name=EString 
+;
+
+Transition returns Transition:
+	{Transition}
+	'Transition'
+	'{'
+		('Label' event=Event)?
+		'Source' source=[State|EString]
+		'Target' target=[State|EString]
+		'Channel' channel=[Channel|EString]
+	'}'
+;
+
+enum Event returns Event:
+	SEND = 'SEND' | RECEIVE = 'RECEIVE'
+;
+
+State returns State:
+	{State}
+	'State'
+	name=EString
+;

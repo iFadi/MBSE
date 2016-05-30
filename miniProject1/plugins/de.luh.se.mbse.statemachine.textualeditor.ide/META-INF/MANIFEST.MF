@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.luh.se.mbse.statemachine.textualeditor.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.luh.se.mbse.statemachine.textualeditor.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.luh.se.mbse.statemachine.textualeditor,
+ de.luh.se.mbse.statemachine,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.luh.se.mbse.statemachine.textualeditor.ide.contentassist.antlr,
+ de.luh.se.mbse.statemachine.textualeditor.ide.contentassist.antlr.internal
+

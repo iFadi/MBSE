@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.luh.se.mbse.statemachine/src" modelPluginID="de.luh.se.mbse.statemachine"
+    modelName="Amf" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>amf.ecore</foreignModel>
+  <genPackages prefix="Amf" disposableProviderFactory="true" ecorePackage="amf.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="amf.ecore#//Event">
+      <genEnumLiterals ecoreEnumLiteral="amf.ecore#//Event/SEND"/>
+      <genEnumLiterals ecoreEnumLiteral="amf.ecore#//Event/RECEIVE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="amf.ecore#//TypeOfChannel">
+      <genEnumLiterals ecoreEnumLiteral="amf.ecore#//TypeOfChannel/Synchronous"/>
+      <genEnumLiterals ecoreEnumLiteral="amf.ecore#//TypeOfChannel/Asynchronous"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="amf.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amf.ecore#//AbstractElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="amf.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amf.ecore#//Transition/Event"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference amf.ecore#//Transition/Channel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference amf.ecore#//Transition/Target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference amf.ecore#//Transition/Source"/>
+    </genClasses>
+    <genClasses ecoreClass="amf.ecore#//State"/>
+    <genClasses ecoreClass="amf.ecore#//Statemachine">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amf.ecore#//Statemachine/State"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference amf.ecore#//Statemachine/InitState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amf.ecore#//Statemachine/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="amf.ecore#//Network">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amf.ecore#//Network/Statemachine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference amf.ecore#//Network/Channel"/>
+    </genClasses>
+    <genClasses ecoreClass="amf.ecore#//Channel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute amf.ecore#//Channel/Type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

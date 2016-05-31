@@ -48,6 +48,8 @@ Network Cafe {
 			Target waitingForPayment
 			Channel deliverCoffee
 		}
+		
+		
 		Transition {
 			Label RECEIVE
 			Source waitingForPayment

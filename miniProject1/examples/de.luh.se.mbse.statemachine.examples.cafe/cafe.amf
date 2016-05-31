@@ -1,0 +1,59 @@
+Network Cafe {
+	Asynchronous Channel orderCoffee
+	Asynchronous Channel deliverCoffee
+	Asynchronous Channel payCoffe
+	
+	Statemachine Guest {
+		init waiting
+		
+		State waiting
+		State drinkingCoffe
+		
+		Transition {
+			Label RECEIVE
+			Source waiting 
+			Target drinkingCoffe 
+			Channel deliverCoffee
+		}
+		Transition {
+			Label SEND
+			Source drinkingCoffe 
+			Target waiting
+			Channel payCoffe
+		}
+		Transition {
+			Label SEND
+			Source waiting 
+			Target waiting
+			Channel orderCoffee
+		}
+	}
+	Statemachine Waiter {
+		init waiting 
+		
+		State waiting 
+		State preparingCoffee 
+		State waitingForPayment 
+		
+		Transition {
+			Label RECEIVE
+			Source waiting
+			Target preparingCoffee
+			Channel orderCoffee
+		}
+		
+		Transition {
+			Label SEND
+			Source preparingCoffee
+			Target waitingForPayment
+			Channel deliverCoffee
+		}
+		Transition {
+			Label RECEIVE
+			Source waitingForPayment
+			Target waiting
+			Channel payCoffe
+		}
+	}
+}
+	

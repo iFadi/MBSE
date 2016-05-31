@@ -1,0 +1,58 @@
+Network name {
+	
+	Synchronous Channel press
+	Synchronous Channel hold
+	Synchronous Channel release
+	
+	Statemachine light {
+		init off 
+		
+		State off 
+		State on 
+		State high
+		
+		Transition {
+			Label RECEIVE
+			Source off
+			Target on
+			Channel press
+		}
+		Transition {
+			Label RECEIVE
+			Source on
+			Target high
+			Channel hold
+		}
+		Transition {
+			Label RECEIVE
+			 Source high
+			 Target off
+			 Channel release
+		}
+	}
+	
+	Statemachine switch {
+		init off 
+		
+		State off 
+		State on 
+		Transition {
+			Label SEND
+			Source off 
+			Target on
+			Channel press
+		}
+		Transition {
+			Label SEND
+			Source on
+			Target on
+			Channel hold
+		}
+		Transition {
+			Label SEND
+			Source on
+			Target off
+			Channel release
+		}
+	}
+}

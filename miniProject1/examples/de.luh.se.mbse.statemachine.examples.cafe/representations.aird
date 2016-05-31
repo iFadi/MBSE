@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amfRules="http://www.amf.org/amf" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_xFzRECZdEea79-tdGUHsgQ" selectedViews="_DuKTUCZeEea79-tdGUHsgQ" version="10.1.0.201509162000">
+  <semanticResources>cafe.amf</semanticResources>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_DuKTUCZeEea79-tdGUHsgQ">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_EyoBACZeEea79-tdGUHsgQ" name="cafe">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_EyoBASZeEea79-tdGUHsgQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_EyooECZeEea79-tdGUHsgQ"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_EypPICZeEea79-tdGUHsgQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_EypPISZeEea79-tdGUHsgQ" type="Sirius" element="_EyoBACZeEea79-tdGUHsgQ" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_EypPIyZeEea79-tdGUHsgQ" type="2001" element="_EyooESZeEea79-tdGUHsgQ">
+            <children xmi:type="notation:Node" xmi:id="_Eyp2MCZeEea79-tdGUHsgQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Eyp2MSZeEea79-tdGUHsgQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Eys5gyZeEea79-tdGUHsgQ" type="3013" element="_EyooEiZeEea79-tdGUHsgQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Eys5hCZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eys5hSZeEea79-tdGUHsgQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EypPJCZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EypPJSZeEea79-tdGUHsgQ" x="28" y="35" width="141" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Eyp2MiZeEea79-tdGUHsgQ" type="2001" element="_EyooEyZeEea79-tdGUHsgQ">
+            <children xmi:type="notation:Node" xmi:id="_EyqdQCZeEea79-tdGUHsgQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_EyqdQSZeEea79-tdGUHsgQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Eys5hiZeEea79-tdGUHsgQ" type="3013" element="_EyooFCZeEea79-tdGUHsgQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Eys5hyZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eys5iCZeEea79-tdGUHsgQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Eyp2MyZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eyp2NCZeEea79-tdGUHsgQ" x="28" y="64" width="141" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EyrEUCZeEea79-tdGUHsgQ" type="2001" element="_EyooFSZeEea79-tdGUHsgQ">
+            <children xmi:type="notation:Node" xmi:id="_EyrrYCZeEea79-tdGUHsgQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_EyrrYSZeEea79-tdGUHsgQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_EytgkCZeEea79-tdGUHsgQ" type="3013" element="_EyooFiZeEea79-tdGUHsgQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_EytgkSZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EytgkiZeEea79-tdGUHsgQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EyrEUSZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyrEUiZeEea79-tdGUHsgQ" x="28" y="93" width="141" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EyrrYiZeEea79-tdGUHsgQ" type="2002" element="_EyooFyZeEea79-tdGUHsgQ">
+            <children xmi:type="notation:Node" xmi:id="_EyrrZSZeEea79-tdGUHsgQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_EysScCZeEea79-tdGUHsgQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_EytgkyZeEea79-tdGUHsgQ" type="3007" element="_EyooGSZeEea79-tdGUHsgQ">
+                <children xmi:type="notation:Node" xmi:id="_EytgliZeEea79-tdGUHsgQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_EytglyZeEea79-tdGUHsgQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_EyuHpSZeEea79-tdGUHsgQ" type="3016" element="_EyooGiZeEea79-tdGUHsgQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_EyuHpiZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyuHpyZeEea79-tdGUHsgQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_EytglCZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EytglSZeEea79-tdGUHsgQ" x="11" y="30" width="53" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_EyuHoCZeEea79-tdGUHsgQ" type="3007" element="_EyooGyZeEea79-tdGUHsgQ">
+                <children xmi:type="notation:Node" xmi:id="_EyuHoyZeEea79-tdGUHsgQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_EyuHpCZeEea79-tdGUHsgQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_EyuHqCZeEea79-tdGUHsgQ" type="3016" element="_EyooHCZeEea79-tdGUHsgQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_EyuusCZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyuusSZeEea79-tdGUHsgQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_EyuHoSZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyuHoiZeEea79-tdGUHsgQ" x="115" y="30" width="57" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_EysScSZeEea79-tdGUHsgQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_EysSciZeEea79-tdGUHsgQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EyrrYyZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyrrZCZeEea79-tdGUHsgQ" x="244" y="35" width="222" height="104"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EysScyZeEea79-tdGUHsgQ" type="2002" element="_EyooHSZeEea79-tdGUHsgQ">
+            <children xmi:type="notation:Node" xmi:id="_EysSdiZeEea79-tdGUHsgQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_Eys5gCZeEea79-tdGUHsgQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_EyuusiZeEea79-tdGUHsgQ" type="3007" element="_EyooHyZeEea79-tdGUHsgQ">
+                <children xmi:type="notation:Node" xmi:id="_EyuutSZeEea79-tdGUHsgQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_EyuutiZeEea79-tdGUHsgQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Eyv80iZeEea79-tdGUHsgQ" type="3016" element="_EyooICZeEea79-tdGUHsgQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Eyv80yZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eyv81CZeEea79-tdGUHsgQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_EyuusyZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyuutCZeEea79-tdGUHsgQ" x="15" y="18" width="57" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_EyvVwCZeEea79-tdGUHsgQ" type="3007" element="_EyooISZeEea79-tdGUHsgQ">
+                <children xmi:type="notation:Node" xmi:id="_EyvVwyZeEea79-tdGUHsgQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_EyvVxCZeEea79-tdGUHsgQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Eyv81SZeEea79-tdGUHsgQ" type="3016" element="_EyooIiZeEea79-tdGUHsgQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Eyv81iZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eyv81yZeEea79-tdGUHsgQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_EyvVwSZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyvVwiZeEea79-tdGUHsgQ" x="63" y="66" width="49" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_EyvVxSZeEea79-tdGUHsgQ" type="3007" element="_EyooIyZeEea79-tdGUHsgQ">
+                <children xmi:type="notation:Node" xmi:id="_Eyv80CZeEea79-tdGUHsgQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_Eyv80SZeEea79-tdGUHsgQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Eywj4CZeEea79-tdGUHsgQ" type="3016" element="_EyooJCZeEea79-tdGUHsgQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Eywj4SZeEea79-tdGUHsgQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eywj4iZeEea79-tdGUHsgQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_EyvVxiZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EyvVxyZeEea79-tdGUHsgQ" x="135" y="30" width="53" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_Eys5gSZeEea79-tdGUHsgQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_Eys5giZeEea79-tdGUHsgQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EysSdCZeEea79-tdGUHsgQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EysSdSZeEea79-tdGUHsgQ" x="244" y="136" width="222" height="123"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_EypPIiZeEea79-tdGUHsgQ"/>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooESZeEea79-tdGUHsgQ" name="orderCoffee Asynchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="cafe.amf#//@channel.0"/>
+        <semanticElements xmi:type="amfRules:Channel" href="cafe.amf#//@channel.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_EyooEiZeEea79-tdGUHsgQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooEyZeEea79-tdGUHsgQ" name="deliverCoffee Asynchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="cafe.amf#//@channel.1"/>
+        <semanticElements xmi:type="amfRules:Channel" href="cafe.amf#//@channel.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_EyooFCZeEea79-tdGUHsgQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooFSZeEea79-tdGUHsgQ" name="payCoffe Asynchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="cafe.amf#//@channel.2"/>
+        <semanticElements xmi:type="amfRules:Channel" href="cafe.amf#//@channel.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_EyooFiZeEea79-tdGUHsgQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_EyooFyZeEea79-tdGUHsgQ" name="Guest">
+        <target xmi:type="amfRules:Statemachine" href="cafe.amf#//@statemachine.0"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="cafe.amf#//@statemachine.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_EyooGCZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooGSZeEea79-tdGUHsgQ" name="waiting" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="cafe.amf#//@statemachine.0/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="cafe.amf#//@statemachine.0/@state.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_EyooGiZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooGyZeEea79-tdGUHsgQ" name="drinkingCoffe" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="cafe.amf#//@statemachine.0/@state.1"/>
+          <semanticElements xmi:type="amfRules:State" href="cafe.amf#//@statemachine.0/@state.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_EyooHCZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_EyooHSZeEea79-tdGUHsgQ" name="Waiter">
+        <target xmi:type="amfRules:Statemachine" href="cafe.amf#//@statemachine.1"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="cafe.amf#//@statemachine.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_EyooHiZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooHyZeEea79-tdGUHsgQ" name="waiting" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="cafe.amf#//@statemachine.1/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="cafe.amf#//@statemachine.1/@state.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_EyooICZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooISZeEea79-tdGUHsgQ" name="preparingCoffee" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="cafe.amf#//@statemachine.1/@state.1"/>
+          <semanticElements xmi:type="amfRules:State" href="cafe.amf#//@statemachine.1/@state.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_EyooIiZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EyooIyZeEea79-tdGUHsgQ" name="waitingForPayment" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="cafe.amf#//@statemachine.1/@state.2"/>
+          <semanticElements xmi:type="amfRules:State" href="cafe.amf#//@statemachine.1/@state.2"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_EyooJCZeEea79-tdGUHsgQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_EyooJSZeEea79-tdGUHsgQ"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer"/>
+      <target xmi:type="amfRules:Network" href="cafe.amf#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

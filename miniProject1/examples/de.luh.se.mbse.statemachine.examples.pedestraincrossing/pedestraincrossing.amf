@@ -1,0 +1,201 @@
+Network PedestrainCrossing {
+	
+	Synchronous Channel pressButton
+	Asynchronous Channel pedestrainRequest
+	Asynchronous Channel Ready
+	Synchronous Channel pedestrainTurnGreen
+	Synchronous Channel pedestrainTurnedGreen
+	Synchronous Channel pedestrainTurnRed
+	Synchronous Channel pedestrainTurnedRed
+	Synchronous Channel trafficTurnGreen
+	Synchronous Channel trafficTurnedGreen
+	Synchronous Channel trafficTurnRed
+	Synchronous Channel trafficTurnedRed
+		
+	Statemachine Pedestrain {
+		init waiting
+			
+		State waiting
+		
+		Transition {
+			Label SEND
+			Source waiting
+			Target waiting
+			Channel pressButton
+		}
+	}
+	
+	Statemachine CrossingControl {
+		init initial
+			
+		State initial
+		State pedestrainRequestReceived
+		State turningTrafficLightsRed
+		State trafficLightsTurnedRed
+		State turningPedestrainLightsGreen
+		State pedestrainLightsTurnedGreen
+		State turningPedestrainLightsRed
+		State pedestrainLightsTurnedRed
+		State turningTrafficLightsGreen
+		State anotherInitial
+	
+		Transition {
+			Label RECEIVE
+			Source initial
+			Target pedestrainRequestReceived
+			Channel pedestrainRequest
+		}
+		Transition {
+			Label SEND
+			Source pedestrainRequestReceived
+			Target turningTrafficLightsRed
+			Channel trafficTurnRed
+		}
+		Transition {
+			Label RECEIVE
+			Source turningTrafficLightsRed
+			Target trafficLightsTurnedRed
+			Channel trafficTurnedRed
+		}
+		Transition {
+			Label SEND
+			Source trafficLightsTurnedRed
+			Target turningPedestrainLightsGreen
+			Channel pedestrainTurnGreen
+		}
+		Transition {
+			Label RECEIVE
+			Source turningPedestrainLightsGreen
+			Target pedestrainLightsTurnedGreen
+			Channel pedestrainTurnedGreen
+		}
+		Transition {
+			Label SEND
+			Source pedestrainLightsTurnedGreen
+			Target turningPedestrainLightsRed
+			Channel pedestrainTurnGreen
+		}
+		Transition {
+			Label RECEIVE
+			Source turningPedestrainLightsRed
+			Target pedestrainLightsTurnedRed
+			Channel pedestrainTurnedRed
+ 		}
+		Transition {
+			Label SEND
+			Source pedestrainLightsTurnedRed
+			Target turningTrafficLightsGreen
+			Channel trafficTurnGreen
+		}
+		Transition {
+			Label RECEIVE
+			Source turningTrafficLightsGreen
+			Target anotherInitial
+			Channel trafficTurnedGreen
+		}
+		Transition {
+			Label SEND
+			Source anotherInitial
+			Target initial
+			Channel Ready
+		}
+	}
+	Statemachine PedestrainUI {
+		init waiting
+			
+		State waiting
+		State buttonPressReceived
+		State waitForGreen
+			
+		Transition {
+			Label RECEIVE
+			Source waiting
+			Target buttonPressReceived
+			Channel pressButton
+		}
+		Transition {
+			Label SEND
+			Source buttonPressReceived
+			Target waitForGreen
+			Channel pedestrainRequest
+		}
+		Transition {
+			Label RECEIVE
+			Source waitForGreen
+			Target waitForGreen
+			Channel pressButton
+		}
+		Transition {
+			Label RECEIVE
+			Source waitForGreen
+			Target waiting
+			Channel Ready
+		}		
+	}
+	Statemachine TrafficLight {
+		init green
+
+		State green
+		State turningRed
+		State red
+		State turningGreen
+			
+		Transition {
+			Label RECEIVE
+			Source green
+			Target turningRed
+			Channel trafficTurnRed
+		}
+		Transition {
+			Label SEND
+			Source turningRed
+			Target red
+			Channel trafficTurnedRed
+		}
+		Transition {
+			Label RECEIVE
+			Source red
+			Target turningGreen
+			Channel trafficTurnGreen
+		}
+		Transition {
+			Label SEND
+			Source turningGreen
+			Target green
+			Channel trafficTurnedGreen
+		}
+	}
+	Statemachine PedestrainLight {
+		init green
+	
+		State green
+		State turningRed
+		State red
+		State turningGreen
+		
+		Transition {
+			Label RECEIVE
+			Source green
+			Target turningRed
+			Channel pedestrainTurnRed
+		}
+		Transition {
+			Label SEND
+			Source turningRed
+			Target red
+			Channel pedestrainTurnedRed
+		}
+			Transition {
+			Label RECEIVE
+			Source red
+			Target turningGreen
+			Channel pedestrainTurnGreen
+		}
+		Transition {
+			Label SEND
+			Source turningGreen
+			Target green
+			Channel pedestrainTurnedGreen
+		}
+	}
+}

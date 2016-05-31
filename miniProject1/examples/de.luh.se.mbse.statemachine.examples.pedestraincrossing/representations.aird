@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amfRules="http://www.amf.org/amf" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_9ukvcCZdEea79-tdGUHsgQ" selectedViews="_ItiXYCZeEea79-tdGUHsgQ" version="10.1.0.201509162000">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amfRules="http://www.amf.org/amf" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_9ukvcCZdEea79-tdGUHsgQ" selectedViews="_kgHdsCczEeaMQ8rlEzUyCQ" version="10.1.0.201509162000">
   <semanticResources>pedestraincrossing.amf</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_ItiXYCZeEea79-tdGUHsgQ">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_dX1cMCZeEea79-tdGUHsgQ" name="pedestrainCrossing">
@@ -751,5 +751,756 @@
       <target xmi:type="amfRules:Network" href="pedestraincrossing.amf#/"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_kgHdsCczEeaMQ8rlEzUyCQ">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_mAiHkCczEeaMQ8rlEzUyCQ" name="pedestrain">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_mAiHkSczEeaMQ8rlEzUyCQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_mAiHkiczEeaMQ8rlEzUyCQ"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_mAjVsCczEeaMQ8rlEzUyCQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_mAjVsSczEeaMQ8rlEzUyCQ" type="Sirius" element="_mAiHkCczEeaMQ8rlEzUyCQ" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_mAj8wCczEeaMQ8rlEzUyCQ" type="2001" element="_mAiuoCczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAkj0CczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAkj0SczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mAymQCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiuoSczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mAymQSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAymQiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAj8wSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAj8wiczEeaMQ8rlEzUyCQ" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAlK4CczEeaMQ8rlEzUyCQ" type="2001" element="_mAiuoiczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAlx8CczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAlx8SczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mAymQyczEeaMQ8rlEzUyCQ" type="3013" element="_mAiuoyczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mAymRCczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAymRSczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAlK4SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAlK4iczEeaMQ8rlEzUyCQ" x="100" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAlx8iczEeaMQ8rlEzUyCQ" type="2001" element="_mAiupCczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAmZACczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAmZASczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mAzNUCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiupSczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mAzNUSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAzNUiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAlx8yczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAlx9CczEeaMQ8rlEzUyCQ" x="200" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAmZAiczEeaMQ8rlEzUyCQ" type="2001" element="_mAiupiczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAnAECczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAnAESczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mAzNUyczEeaMQ8rlEzUyCQ" type="3013" element="_mAiupyczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mAzNVCczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAzNVSczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAmZAyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAmZBCczEeaMQ8rlEzUyCQ" x="300" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAnAEiczEeaMQ8rlEzUyCQ" type="2001" element="_mAiuqCczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAnnICczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAnnISczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mAz0YCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiuqSczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mAz0YSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAz0YiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAnAEyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAnAFCczEeaMQ8rlEzUyCQ" x="400" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAnnIiczEeaMQ8rlEzUyCQ" type="2001" element="_mAiuqiczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAoOMCczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAoOMSczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mAz0YyczEeaMQ8rlEzUyCQ" type="3013" element="_mAiuqyczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mAz0ZCczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAz0ZSczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAnnIyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAnnJCczEeaMQ8rlEzUyCQ" x="500" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAo1QCczEeaMQ8rlEzUyCQ" type="2001" element="_mAiurCczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAo1QyczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAo1RCczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mA0bcCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiurSczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mA0bcSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA0bciczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAo1QSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAo1QiczEeaMQ8rlEzUyCQ" x="600" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mApcUCczEeaMQ8rlEzUyCQ" type="2001" element="_mAiuriczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mApcUyczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mApcVCczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mA0bcyczEeaMQ8rlEzUyCQ" type="3013" element="_mAiuryczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mA0bdCczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA0bdSczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mApcUSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mApcUiczEeaMQ8rlEzUyCQ" x="700" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAqDYCczEeaMQ8rlEzUyCQ" type="2001" element="_mAiusCczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mArRgCczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mArRgSczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mA1CgCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiusSczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mA1CgSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA1CgiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAqDYSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAqDYiczEeaMQ8rlEzUyCQ" x="800" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAsfoCczEeaMQ8rlEzUyCQ" type="2001" element="_mAiusiczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAtGsCczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAtGsSczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mA1pkCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiusyczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mA1pkSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA1pkiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAsfoSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAsfoiczEeaMQ8rlEzUyCQ" x="900" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAttwCczEeaMQ8rlEzUyCQ" type="2001" element="_mAiutCczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAuU0CczEeaMQ8rlEzUyCQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mAuU0SczEeaMQ8rlEzUyCQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mA2QoCczEeaMQ8rlEzUyCQ" type="3013" element="_mAiutSczEeaMQ8rlEzUyCQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mA2QoSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA2QoiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAttwSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAttwiczEeaMQ8rlEzUyCQ" x="1000" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAuU0iczEeaMQ8rlEzUyCQ" type="2002" element="_mAiuticzEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAu74CczEeaMQ8rlEzUyCQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_mAu74SczEeaMQ8rlEzUyCQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_mA23sCczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuuCczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA23syczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA23tCczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mA3ewCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuuSczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mA3ewSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA3ewiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA23sSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA23siczEeaMQ8rlEzUyCQ" x="31" y="30" width="30" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_mAu74iczEeaMQ8rlEzUyCQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_mAu74yczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAuU0yczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAuU1CczEeaMQ8rlEzUyCQ" x="1100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAu75CczEeaMQ8rlEzUyCQ" type="2002" element="_mAiuuiczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAvi8CczEeaMQ8rlEzUyCQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_mAvi8SczEeaMQ8rlEzUyCQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_mA4F0CczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuvCczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA4F0yczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA4F1CczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBABoCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuvSczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBABoSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBABoiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA4F0SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA4F0iczEeaMQ8rlEzUyCQ" x="31" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA4s4CczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuviczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA4s4yczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA4s5CczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBAosCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuvyczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBAosSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBAosiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA4s4SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA4s4iczEeaMQ8rlEzUyCQ" x="91" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA5T8CczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuwCczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA57ACczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA57ASczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBBPwCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuwSczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBBPwSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBBPwiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA5T8SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA5T8iczEeaMQ8rlEzUyCQ" x="179" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA57AiczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuwiczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA6iECczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA6iESczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBB20CczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuwyczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBB20SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBB20iczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA57AyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA57BCczEeaMQ8rlEzUyCQ" x="271" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA7JICczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuxCczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA7wMCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA7wMSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBB20yczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuxSczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBB21CczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBB21SczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA7JISczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA7JIiczEeaMQ8rlEzUyCQ" x="359" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA8XQCczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuxiczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA8-UCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA8-USczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBCd4CczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuxyczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBCd4SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBCd4iczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA8XQSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA8XQiczEeaMQ8rlEzUyCQ" x="451" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA8-UiczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuyCczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA9lYCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA9lYSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBCd4yczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuySczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBCd5CczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBCd5SczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA8-UyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA8-VCczEeaMQ8rlEzUyCQ" x="539" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA9lYiczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuyiczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA-McCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA-McSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBCd5iczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuyyczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBCd5yczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBCd6CczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA9lYyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA9lZCczEeaMQ8rlEzUyCQ" x="631" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA-MciczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuzCczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA-zgCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA-zgSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBCd6SczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuzSczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBCd6iczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBCd6yczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA-McyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA-MdCczEeaMQ8rlEzUyCQ" x="719" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mA-zgiczEeaMQ8rlEzUyCQ" type="3007" element="_mAiuziczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mA_akCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mA_akSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBDE8CczEeaMQ8rlEzUyCQ" type="3016" element="_mAiuzyczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBDE8SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBDE8iczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mA-zgyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mA-zhCczEeaMQ8rlEzUyCQ" x="811" y="30" width="30" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_mAvi8iczEeaMQ8rlEzUyCQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_mAvi8yczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAu75SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAu75iczEeaMQ8rlEzUyCQ" x="1312"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAwKACczEeaMQ8rlEzUyCQ" type="2002" element="_mAiu0CczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAwKAyczEeaMQ8rlEzUyCQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_mAwxECczEeaMQ8rlEzUyCQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_mBDE8yczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu0iczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBDsACczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBDsASczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBGIQCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu0yczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBGIQSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBGIQiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBDE9CczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBDE9SczEeaMQ8rlEzUyCQ" x="31" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBETECczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu1CczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBE6ICczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBE6ISczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBGIQyczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu1SczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBGIRCczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBGIRSczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBETESczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBETEiczEeaMQ8rlEzUyCQ" x="91" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBE6IiczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu1iczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBFhMCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBFhMSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBGvUCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu1yczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBGvUSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBGvUiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBE6IyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBE6JCczEeaMQ8rlEzUyCQ" x="179" y="30" width="30" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_mAwxESczEeaMQ8rlEzUyCQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_mAwxEiczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAwKASczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAwKAiczEeaMQ8rlEzUyCQ" x="2240"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAwxEyczEeaMQ8rlEzUyCQ" type="2002" element="_mAiu2CczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAxYICczEeaMQ8rlEzUyCQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_mAxYISczEeaMQ8rlEzUyCQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_mBHWYCczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu2iczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBHWYyczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBHWZCczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBJLkiczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu2yczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBJLkyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBJLlCczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBHWYSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBHWYiczEeaMQ8rlEzUyCQ" x="31" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBH9cCczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu3CczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBH9cyczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBH9dCczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBJLlSczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu3SczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBJLliczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBJLlyczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBH9cSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBH9ciczEeaMQ8rlEzUyCQ" x="91" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBIkgCczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu3iczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBIkgyczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBIkhCczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBJyoCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu3yczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBJyoSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBJyoiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBIkgSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBIkgiczEeaMQ8rlEzUyCQ" x="179" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBIkhSczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu4CczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBJLkCczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBJLkSczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBKZsCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu4SczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBKZsSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBKZsiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBIkhiczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBIkhyczEeaMQ8rlEzUyCQ" x="271" y="30" width="30" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_mAxYIiczEeaMQ8rlEzUyCQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_mAxYIyczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAwxFCczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAwxFSczEeaMQ8rlEzUyCQ" x="2540"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_mAxYJCczEeaMQ8rlEzUyCQ" type="2002" element="_mAiu4iczEeaMQ8rlEzUyCQ">
+            <children xmi:type="notation:Node" xmi:id="_mAx_MCczEeaMQ8rlEzUyCQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_mAx_MSczEeaMQ8rlEzUyCQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_mBLAwCczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu5CczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBLn0CczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBLn0SczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBOEECczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu5SczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBOEESczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBOEEiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBLAwSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBLAwiczEeaMQ8rlEzUyCQ" x="31" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBLn0iczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu5iczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBMO4CczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBMO4SczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBOrICczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu5yczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBOrISczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBOrIiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBLn0yczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBLn1CczEeaMQ8rlEzUyCQ" x="91" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBM18CczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu6CczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBM18yczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBM19CczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBPSMCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu6SczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBPSMSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBPSMiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBM18SczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBM18iczEeaMQ8rlEzUyCQ" x="179" y="30" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mBNdACczEeaMQ8rlEzUyCQ" type="3007" element="_mAiu6iczEeaMQ8rlEzUyCQ">
+                <children xmi:type="notation:Node" xmi:id="_mBNdAyczEeaMQ8rlEzUyCQ" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mBNdBCczEeaMQ8rlEzUyCQ" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mBP5QCczEeaMQ8rlEzUyCQ" type="3016" element="_mAiu6yczEeaMQ8rlEzUyCQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mBP5QSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBP5QiczEeaMQ8rlEzUyCQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mBNdASczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBNdAiczEeaMQ8rlEzUyCQ" x="271" y="30" width="30" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_mAx_MiczEeaMQ8rlEzUyCQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_mAx_MyczEeaMQ8rlEzUyCQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mAxYJSczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mAxYJiczEeaMQ8rlEzUyCQ" x="2928"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_mAjVsiczEeaMQ8rlEzUyCQ"/>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuoCczEeaMQ8rlEzUyCQ" name="pressButton Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.0"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.0"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiuoSczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuoiczEeaMQ8rlEzUyCQ" name="pedestrainRequest Asynchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.1"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.1"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiuoyczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiupCczEeaMQ8rlEzUyCQ" name="Ready Asynchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.2"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.2"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiupSczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiupiczEeaMQ8rlEzUyCQ" name="pedestrainTurnGreen Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.3"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.3"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiupyczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuqCczEeaMQ8rlEzUyCQ" name="pedestrainTurnedGreen Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.4"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.4"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiuqSczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuqiczEeaMQ8rlEzUyCQ" name="pedestrainTurnRed Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.5"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.5"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiuqyczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiurCczEeaMQ8rlEzUyCQ" name="pedestrainTurnedRed Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.6"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.6"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiurSczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuriczEeaMQ8rlEzUyCQ" name="trafficTurnGreen Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.7"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.7"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiuryczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiusCczEeaMQ8rlEzUyCQ" name="trafficTurnedGreen Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.8"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.8"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiusSczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiusiczEeaMQ8rlEzUyCQ" name="trafficTurnRed Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.9"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.9"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiusyczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiutCczEeaMQ8rlEzUyCQ" name="trafficTurnedRed Synchronous" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.10"/>
+        <semanticElements xmi:type="amfRules:Channel" href="pedestraincrossing.amf#//@channel.10"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_mAiutSczEeaMQ8rlEzUyCQ" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@nodeMappings[name='Channel']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_mAiuticzEeaMQ8rlEzUyCQ" name="Pedestrain">
+        <target xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.0"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_mAiutyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuuCczEeaMQ8rlEzUyCQ" name="waiting" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.0/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.0/@state.0"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuuSczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_mAiuuiczEeaMQ8rlEzUyCQ" name="CrossingControl">
+        <target xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.1"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_mAiuuyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuvCczEeaMQ8rlEzUyCQ" name="initial" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.0"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuvSczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuviczEeaMQ8rlEzUyCQ" name="pedestrainRequestReceived" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.1"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.1"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuvyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuwCczEeaMQ8rlEzUyCQ" name="turningTrafficLightsRed" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.2"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.2"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuwSczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuwiczEeaMQ8rlEzUyCQ" name="trafficLightsTurnedRed" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.3"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.3"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuwyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuxCczEeaMQ8rlEzUyCQ" name="turningPedestrainLightsGreen" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.4"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.4"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuxSczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuxiczEeaMQ8rlEzUyCQ" name="pedestrainLightsTurnedGreen" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.5"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.5"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuxyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuyCczEeaMQ8rlEzUyCQ" name="turningPedestrainLightsRed" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.6"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.6"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuySczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuyiczEeaMQ8rlEzUyCQ" name="pedestrainLightsTurnedRed" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.7"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.7"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuyyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuzCczEeaMQ8rlEzUyCQ" name="turningTrafficLightsGreen" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.8"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.8"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuzSczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiuziczEeaMQ8rlEzUyCQ" name="anotherInitial" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.9"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.1/@state.9"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiuzyczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_mAiu0CczEeaMQ8rlEzUyCQ" name="PedestrainUI">
+        <target xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.2"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_mAiu0SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu0iczEeaMQ8rlEzUyCQ" name="waiting" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.2/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.2/@state.0"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu0yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu1CczEeaMQ8rlEzUyCQ" name="buttonPressReceived" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.2/@state.1"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.2/@state.1"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu1SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu1iczEeaMQ8rlEzUyCQ" name="waitForGreen" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.2/@state.2"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.2/@state.2"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu1yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_mAiu2CczEeaMQ8rlEzUyCQ" name="TrafficLight">
+        <target xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.3"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_mAiu2SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu2iczEeaMQ8rlEzUyCQ" name="green" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.0"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu2yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu3CczEeaMQ8rlEzUyCQ" name="turningRed" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.1"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.1"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu3SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu3iczEeaMQ8rlEzUyCQ" name="red" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.2"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.2"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu3yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu4CczEeaMQ8rlEzUyCQ" name="turningGreen" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.3"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.3/@state.3"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu4SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_mAiu4iczEeaMQ8rlEzUyCQ" name="PedestrainLight">
+        <target xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.4"/>
+        <semanticElements xmi:type="amfRules:Statemachine" href="pedestraincrossing.amf#//@statemachine.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_mAiu4yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu5CczEeaMQ8rlEzUyCQ" name="green" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.0"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.0"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu5SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu5iczEeaMQ8rlEzUyCQ" name="turningRed" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.1"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.1"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu5yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu6CczEeaMQ8rlEzUyCQ" name="red" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.2"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.2"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu6SczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_mAiu6iczEeaMQ8rlEzUyCQ" name="turningGreen" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.3"/>
+          <semanticElements xmi:type="amfRules:State" href="pedestraincrossing.amf#//@statemachine.4/@state.3"/>
+          <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_mAiu6yczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@subNodeMappings[name='State']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_mAiu7CczEeaMQ8rlEzUyCQ"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer"/>
+      <target xmi:type="amfRules:Network" href="pedestraincrossing.amf#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']"/>
   </ownedViews>
 </viewpoint:DAnalysis>

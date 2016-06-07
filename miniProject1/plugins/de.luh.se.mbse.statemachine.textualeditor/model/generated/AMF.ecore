@@ -26,10 +26,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="#//Event"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//State"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//State"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="channel" eType="#//Channel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//State"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="#//Event"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Event">
     <eLiterals name="SEND" literal="SEND"/>

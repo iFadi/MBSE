@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAMFParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Network'", "'{'", "'}'", "'Statemachine'", "'init'", "'Channel'", "'Transition'", "'Label'", "'Source'", "'Target'", "'State'", "'Synchronous'", "'Asynchronous'", "'SEND'", "'RECEIVE'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Network'", "'{'", "'}'", "'Statemachine'", "'init'", "'Channel'", "'Transition'", "'->'", "'('", "')'", "'State'", "'Synchronous'", "'Asynchronous'", "'SEND'", "'RECEIVE'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -1055,29 +1055,26 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransition"
-    // InternalAMF.g:461:1: ruleTransition returns [EObject current=null] : ( () otherlv_1= 'Transition' otherlv_2= '{' (otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) ) )? otherlv_5= 'Source' ( ( ruleEString ) ) otherlv_7= 'Target' ( ( ruleEString ) ) otherlv_9= 'Channel' ( ( ruleEString ) ) otherlv_11= '}' ) ;
+    // InternalAMF.g:461:1: ruleTransition returns [EObject current=null] : ( () otherlv_1= 'Transition' ( ( ruleEString ) ) otherlv_3= '->' otherlv_4= '(' ( ( ruleEString ) ) otherlv_6= ')' ( ( ruleEString ) ) ( (lv_event_8_0= ruleEvent ) ) ) ;
     public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        Token otherlv_9=null;
-        Token otherlv_11=null;
-        Enumerator lv_event_4_0 = null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Enumerator lv_event_8_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAMF.g:467:2: ( ( () otherlv_1= 'Transition' otherlv_2= '{' (otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) ) )? otherlv_5= 'Source' ( ( ruleEString ) ) otherlv_7= 'Target' ( ( ruleEString ) ) otherlv_9= 'Channel' ( ( ruleEString ) ) otherlv_11= '}' ) )
-            // InternalAMF.g:468:2: ( () otherlv_1= 'Transition' otherlv_2= '{' (otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) ) )? otherlv_5= 'Source' ( ( ruleEString ) ) otherlv_7= 'Target' ( ( ruleEString ) ) otherlv_9= 'Channel' ( ( ruleEString ) ) otherlv_11= '}' )
+            // InternalAMF.g:467:2: ( ( () otherlv_1= 'Transition' ( ( ruleEString ) ) otherlv_3= '->' otherlv_4= '(' ( ( ruleEString ) ) otherlv_6= ')' ( ( ruleEString ) ) ( (lv_event_8_0= ruleEvent ) ) ) )
+            // InternalAMF.g:468:2: ( () otherlv_1= 'Transition' ( ( ruleEString ) ) otherlv_3= '->' otherlv_4= '(' ( ( ruleEString ) ) otherlv_6= ')' ( ( ruleEString ) ) ( (lv_event_8_0= ruleEvent ) ) )
             {
-            // InternalAMF.g:468:2: ( () otherlv_1= 'Transition' otherlv_2= '{' (otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) ) )? otherlv_5= 'Source' ( ( ruleEString ) ) otherlv_7= 'Target' ( ( ruleEString ) ) otherlv_9= 'Channel' ( ( ruleEString ) ) otherlv_11= '}' )
-            // InternalAMF.g:469:3: () otherlv_1= 'Transition' otherlv_2= '{' (otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) ) )? otherlv_5= 'Source' ( ( ruleEString ) ) otherlv_7= 'Target' ( ( ruleEString ) ) otherlv_9= 'Channel' ( ( ruleEString ) ) otherlv_11= '}'
+            // InternalAMF.g:468:2: ( () otherlv_1= 'Transition' ( ( ruleEString ) ) otherlv_3= '->' otherlv_4= '(' ( ( ruleEString ) ) otherlv_6= ')' ( ( ruleEString ) ) ( (lv_event_8_0= ruleEvent ) ) )
+            // InternalAMF.g:469:3: () otherlv_1= 'Transition' ( ( ruleEString ) ) otherlv_3= '->' otherlv_4= '(' ( ( ruleEString ) ) otherlv_6= ')' ( ( ruleEString ) ) ( (lv_event_8_0= ruleEvent ) )
             {
             // InternalAMF.g:469:3: ()
             // InternalAMF.g:470:4: 
@@ -1090,75 +1087,15 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,17,FOLLOW_4); 
+            otherlv_1=(Token)match(input,17,FOLLOW_3); 
 
             			newLeafNode(otherlv_1, grammarAccess.getTransitionAccess().getTransitionKeyword_1());
             		
-            otherlv_2=(Token)match(input,12,FOLLOW_12); 
-
-            			newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getLeftCurlyBracketKeyword_2());
-            		
-            // InternalAMF.g:484:3: (otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) ) )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
-
-            if ( (LA7_0==18) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // InternalAMF.g:485:4: otherlv_3= 'Label' ( (lv_event_4_0= ruleEvent ) )
-                    {
-                    otherlv_3=(Token)match(input,18,FOLLOW_13); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getLabelKeyword_3_0());
-                    			
-                    // InternalAMF.g:489:4: ( (lv_event_4_0= ruleEvent ) )
-                    // InternalAMF.g:490:5: (lv_event_4_0= ruleEvent )
-                    {
-                    // InternalAMF.g:490:5: (lv_event_4_0= ruleEvent )
-                    // InternalAMF.g:491:6: lv_event_4_0= ruleEvent
-                    {
-
-                    						newCompositeNode(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_3_1_0());
-                    					
-                    pushFollow(FOLLOW_14);
-                    lv_event_4_0=ruleEvent();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getTransitionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"event",
-                    							lv_event_4_0,
-                    							"de.luh.se.mbse.statemachine.textualeditor.AMF.Event");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_5=(Token)match(input,19,FOLLOW_3); 
-
-            			newLeafNode(otherlv_5, grammarAccess.getTransitionAccess().getSourceKeyword_4());
-            		
-            // InternalAMF.g:513:3: ( ( ruleEString ) )
-            // InternalAMF.g:514:4: ( ruleEString )
+            // InternalAMF.g:480:3: ( ( ruleEString ) )
+            // InternalAMF.g:481:4: ( ruleEString )
             {
-            // InternalAMF.g:514:4: ( ruleEString )
-            // InternalAMF.g:515:5: ruleEString
+            // InternalAMF.g:481:4: ( ruleEString )
+            // InternalAMF.g:482:5: ruleEString
             {
 
             					if (current==null) {
@@ -1166,7 +1103,75 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
             					}
             				
 
-            					newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_5_0());
+            					newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_2_0());
+            				
+            pushFollow(FOLLOW_12);
+            ruleEString();
+
+            state._fsp--;
+
+
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,18,FOLLOW_13); 
+
+            			newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getHyphenMinusGreaterThanSignKeyword_3());
+            		
+            otherlv_4=(Token)match(input,19,FOLLOW_3); 
+
+            			newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getLeftParenthesisKeyword_4());
+            		
+            // InternalAMF.g:504:3: ( ( ruleEString ) )
+            // InternalAMF.g:505:4: ( ruleEString )
+            {
+            // InternalAMF.g:505:4: ( ruleEString )
+            // InternalAMF.g:506:5: ruleEString
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getTransitionRule());
+            					}
+            				
+
+            					newCompositeNode(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_5_0());
+            				
+            pushFollow(FOLLOW_14);
+            ruleEString();
+
+            state._fsp--;
+
+
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            otherlv_6=(Token)match(input,20,FOLLOW_3); 
+
+            			newLeafNode(otherlv_6, grammarAccess.getTransitionAccess().getRightParenthesisKeyword_6());
+            		
+            // InternalAMF.g:524:3: ( ( ruleEString ) )
+            // InternalAMF.g:525:4: ( ruleEString )
+            {
+            // InternalAMF.g:525:4: ( ruleEString )
+            // InternalAMF.g:526:5: ruleEString
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getTransitionRule());
+            					}
+            				
+
+            					newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_7_0());
             				
             pushFollow(FOLLOW_15);
             ruleEString();
@@ -1182,30 +1187,29 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,20,FOLLOW_3); 
-
-            			newLeafNode(otherlv_7, grammarAccess.getTransitionAccess().getTargetKeyword_6());
-            		
-            // InternalAMF.g:533:3: ( ( ruleEString ) )
-            // InternalAMF.g:534:4: ( ruleEString )
+            // InternalAMF.g:540:3: ( (lv_event_8_0= ruleEvent ) )
+            // InternalAMF.g:541:4: (lv_event_8_0= ruleEvent )
             {
-            // InternalAMF.g:534:4: ( ruleEString )
-            // InternalAMF.g:535:5: ruleEString
+            // InternalAMF.g:541:4: (lv_event_8_0= ruleEvent )
+            // InternalAMF.g:542:5: lv_event_8_0= ruleEvent
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getTransitionRule());
-            					}
+            					newCompositeNode(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_8_0());
             				
-
-            					newCompositeNode(grammarAccess.getTransitionAccess().getTargetStateCrossReference_7_0());
-            				
-            pushFollow(FOLLOW_11);
-            ruleEString();
+            pushFollow(FOLLOW_2);
+            lv_event_8_0=ruleEvent();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getTransitionRule());
+            					}
+            					set(
+            						current,
+            						"event",
+            						lv_event_8_0,
+            						"de.luh.se.mbse.statemachine.textualeditor.AMF.Event");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1214,42 +1218,6 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,16,FOLLOW_3); 
-
-            			newLeafNode(otherlv_9, grammarAccess.getTransitionAccess().getChannelKeyword_8());
-            		
-            // InternalAMF.g:553:3: ( ( ruleEString ) )
-            // InternalAMF.g:554:4: ( ruleEString )
-            {
-            // InternalAMF.g:554:4: ( ruleEString )
-            // InternalAMF.g:555:5: ruleEString
-            {
-
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getTransitionRule());
-            					}
-            				
-
-            					newCompositeNode(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_9_0());
-            				
-            pushFollow(FOLLOW_16);
-            ruleEString();
-
-            state._fsp--;
-
-
-            					afterParserOrEnumRuleCall();
-            				
-
-            }
-
-
-            }
-
-            otherlv_11=(Token)match(input,13,FOLLOW_2); 
-
-            			newLeafNode(otherlv_11, grammarAccess.getTransitionAccess().getRightCurlyBracketKeyword_10());
-            		
 
             }
 
@@ -1273,7 +1241,7 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleState"
-    // InternalAMF.g:577:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
+    // InternalAMF.g:563:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
     public final EObject entryRuleState() throws RecognitionException {
         EObject current = null;
 
@@ -1281,8 +1249,8 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAMF.g:577:46: (iv_ruleState= ruleState EOF )
-            // InternalAMF.g:578:2: iv_ruleState= ruleState EOF
+            // InternalAMF.g:563:46: (iv_ruleState= ruleState EOF )
+            // InternalAMF.g:564:2: iv_ruleState= ruleState EOF
             {
              newCompositeNode(grammarAccess.getStateRule()); 
             pushFollow(FOLLOW_1);
@@ -1309,7 +1277,7 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleState"
-    // InternalAMF.g:584:1: ruleState returns [EObject current=null] : ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) ) ;
+    // InternalAMF.g:570:1: ruleState returns [EObject current=null] : ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) ) ;
     public final EObject ruleState() throws RecognitionException {
         EObject current = null;
 
@@ -1321,14 +1289,14 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAMF.g:590:2: ( ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) ) )
-            // InternalAMF.g:591:2: ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) )
+            // InternalAMF.g:576:2: ( ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) ) )
+            // InternalAMF.g:577:2: ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) )
             {
-            // InternalAMF.g:591:2: ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) )
-            // InternalAMF.g:592:3: () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) )
+            // InternalAMF.g:577:2: ( () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) ) )
+            // InternalAMF.g:578:3: () otherlv_1= 'State' ( (lv_name_2_0= ruleEString ) )
             {
-            // InternalAMF.g:592:3: ()
-            // InternalAMF.g:593:4: 
+            // InternalAMF.g:578:3: ()
+            // InternalAMF.g:579:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1342,11 +1310,11 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getStateAccess().getStateKeyword_1());
             		
-            // InternalAMF.g:603:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalAMF.g:604:4: (lv_name_2_0= ruleEString )
+            // InternalAMF.g:589:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalAMF.g:590:4: (lv_name_2_0= ruleEString )
             {
-            // InternalAMF.g:604:4: (lv_name_2_0= ruleEString )
-            // InternalAMF.g:605:5: lv_name_2_0= ruleEString
+            // InternalAMF.g:590:4: (lv_name_2_0= ruleEString )
+            // InternalAMF.g:591:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getStateAccess().getNameEStringParserRuleCall_2_0());
@@ -1396,7 +1364,7 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeOfChannel"
-    // InternalAMF.g:626:1: ruleTypeOfChannel returns [Enumerator current=null] : ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) ) ;
+    // InternalAMF.g:612:1: ruleTypeOfChannel returns [Enumerator current=null] : ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) ) ;
     public final Enumerator ruleTypeOfChannel() throws RecognitionException {
         Enumerator current = null;
 
@@ -1407,31 +1375,31 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAMF.g:632:2: ( ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) ) )
-            // InternalAMF.g:633:2: ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) )
+            // InternalAMF.g:618:2: ( ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) ) )
+            // InternalAMF.g:619:2: ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) )
             {
-            // InternalAMF.g:633:2: ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // InternalAMF.g:619:2: ( (enumLiteral_0= 'Synchronous' ) | (enumLiteral_1= 'Asynchronous' ) )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA8_0==22) ) {
-                alt8=1;
+            if ( (LA7_0==22) ) {
+                alt7=1;
             }
-            else if ( (LA8_0==23) ) {
-                alt8=2;
+            else if ( (LA7_0==23) ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // InternalAMF.g:634:3: (enumLiteral_0= 'Synchronous' )
+                    // InternalAMF.g:620:3: (enumLiteral_0= 'Synchronous' )
                     {
-                    // InternalAMF.g:634:3: (enumLiteral_0= 'Synchronous' )
-                    // InternalAMF.g:635:4: enumLiteral_0= 'Synchronous'
+                    // InternalAMF.g:620:3: (enumLiteral_0= 'Synchronous' )
+                    // InternalAMF.g:621:4: enumLiteral_0= 'Synchronous'
                     {
                     enumLiteral_0=(Token)match(input,22,FOLLOW_2); 
 
@@ -1445,10 +1413,10 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAMF.g:642:3: (enumLiteral_1= 'Asynchronous' )
+                    // InternalAMF.g:628:3: (enumLiteral_1= 'Asynchronous' )
                     {
-                    // InternalAMF.g:642:3: (enumLiteral_1= 'Asynchronous' )
-                    // InternalAMF.g:643:4: enumLiteral_1= 'Asynchronous'
+                    // InternalAMF.g:628:3: (enumLiteral_1= 'Asynchronous' )
+                    // InternalAMF.g:629:4: enumLiteral_1= 'Asynchronous'
                     {
                     enumLiteral_1=(Token)match(input,23,FOLLOW_2); 
 
@@ -1484,7 +1452,7 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvent"
-    // InternalAMF.g:653:1: ruleEvent returns [Enumerator current=null] : ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) ) ;
+    // InternalAMF.g:639:1: ruleEvent returns [Enumerator current=null] : ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) ) ;
     public final Enumerator ruleEvent() throws RecognitionException {
         Enumerator current = null;
 
@@ -1495,31 +1463,31 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAMF.g:659:2: ( ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) ) )
-            // InternalAMF.g:660:2: ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) )
+            // InternalAMF.g:645:2: ( ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) ) )
+            // InternalAMF.g:646:2: ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) )
             {
-            // InternalAMF.g:660:2: ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalAMF.g:646:2: ( (enumLiteral_0= 'SEND' ) | (enumLiteral_1= 'RECEIVE' ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0==24) ) {
-                alt9=1;
+            if ( (LA8_0==24) ) {
+                alt8=1;
             }
-            else if ( (LA9_0==25) ) {
-                alt9=2;
+            else if ( (LA8_0==25) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // InternalAMF.g:661:3: (enumLiteral_0= 'SEND' )
+                    // InternalAMF.g:647:3: (enumLiteral_0= 'SEND' )
                     {
-                    // InternalAMF.g:661:3: (enumLiteral_0= 'SEND' )
-                    // InternalAMF.g:662:4: enumLiteral_0= 'SEND'
+                    // InternalAMF.g:647:3: (enumLiteral_0= 'SEND' )
+                    // InternalAMF.g:648:4: enumLiteral_0= 'SEND'
                     {
                     enumLiteral_0=(Token)match(input,24,FOLLOW_2); 
 
@@ -1533,10 +1501,10 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAMF.g:669:3: (enumLiteral_1= 'RECEIVE' )
+                    // InternalAMF.g:655:3: (enumLiteral_1= 'RECEIVE' )
                     {
-                    // InternalAMF.g:669:3: (enumLiteral_1= 'RECEIVE' )
-                    // InternalAMF.g:670:4: enumLiteral_1= 'RECEIVE'
+                    // InternalAMF.g:655:3: (enumLiteral_1= 'RECEIVE' )
+                    // InternalAMF.g:656:4: enumLiteral_1= 'RECEIVE'
                     {
                     enumLiteral_1=(Token)match(input,25,FOLLOW_2); 
 
@@ -1586,10 +1554,9 @@ public class InternalAMFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000220000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000222000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x00000000000C0000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000003000000L});
 
 }

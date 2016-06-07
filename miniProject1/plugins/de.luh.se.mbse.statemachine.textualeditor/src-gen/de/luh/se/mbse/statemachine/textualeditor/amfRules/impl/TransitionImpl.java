@@ -25,16 +25,46 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.TransitionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.TransitionImpl#getChannel <em>Channel</em>}</li>
+ *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition
 {
+  /**
+   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSource()
+   * @generated
+   * @ordered
+   */
+  protected State source;
+
+  /**
+   * The cached value of the '{@link #getChannel() <em>Channel</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getChannel()
+   * @generated
+   * @ordered
+   */
+  protected Channel channel;
+
+  /**
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTarget()
+   * @generated
+   * @ordered
+   */
+  protected State target;
+
   /**
    * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -56,36 +86,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   protected Event event = EVENT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSource()
-   * @generated
-   * @ordered
-   */
-  protected State source;
-
-  /**
-   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTarget()
-   * @generated
-   * @ordered
-   */
-  protected State target;
-
-  /**
-   * The cached value of the '{@link #getChannel() <em>Channel</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getChannel()
-   * @generated
-   * @ordered
-   */
-  protected Channel channel;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -104,29 +104,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   protected EClass eStaticClass()
   {
     return AmfRulesPackage.Literals.TRANSITION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Event getEvent()
-  {
-    return event;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEvent(Event newEvent)
-  {
-    Event oldEvent = event;
-    event = newEvent == null ? EVENT_EDEFAULT : newEvent;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AmfRulesPackage.TRANSITION__EVENT, oldEvent, event));
   }
 
   /**
@@ -177,49 +154,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public State getTarget()
-  {
-    if (target != null && target.eIsProxy())
-    {
-      InternalEObject oldTarget = (InternalEObject)target;
-      target = (State)eResolveProxy(oldTarget);
-      if (target != oldTarget)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AmfRulesPackage.TRANSITION__TARGET, oldTarget, target));
-      }
-    }
-    return target;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public State basicGetTarget()
-  {
-    return target;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTarget(State newTarget)
-  {
-    State oldTarget = target;
-    target = newTarget;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AmfRulesPackage.TRANSITION__TARGET, oldTarget, target));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Channel getChannel()
   {
     if (channel != null && channel.eIsProxy())
@@ -263,22 +197,88 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
+  public State getTarget()
+  {
+    if (target != null && target.eIsProxy())
+    {
+      InternalEObject oldTarget = (InternalEObject)target;
+      target = (State)eResolveProxy(oldTarget);
+      if (target != oldTarget)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AmfRulesPackage.TRANSITION__TARGET, oldTarget, target));
+      }
+    }
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public State basicGetTarget()
+  {
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTarget(State newTarget)
+  {
+    State oldTarget = target;
+    target = newTarget;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AmfRulesPackage.TRANSITION__TARGET, oldTarget, target));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Event getEvent()
+  {
+    return event;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEvent(Event newEvent)
+  {
+    Event oldEvent = event;
+    event = newEvent == null ? EVENT_EDEFAULT : newEvent;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AmfRulesPackage.TRANSITION__EVENT, oldEvent, event));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
-      case AmfRulesPackage.TRANSITION__EVENT:
-        return getEvent();
       case AmfRulesPackage.TRANSITION__SOURCE:
         if (resolve) return getSource();
         return basicGetSource();
-      case AmfRulesPackage.TRANSITION__TARGET:
-        if (resolve) return getTarget();
-        return basicGetTarget();
       case AmfRulesPackage.TRANSITION__CHANNEL:
         if (resolve) return getChannel();
         return basicGetChannel();
+      case AmfRulesPackage.TRANSITION__TARGET:
+        if (resolve) return getTarget();
+        return basicGetTarget();
+      case AmfRulesPackage.TRANSITION__EVENT:
+        return getEvent();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -293,17 +293,17 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case AmfRulesPackage.TRANSITION__EVENT:
-        setEvent((Event)newValue);
-        return;
       case AmfRulesPackage.TRANSITION__SOURCE:
         setSource((State)newValue);
+        return;
+      case AmfRulesPackage.TRANSITION__CHANNEL:
+        setChannel((Channel)newValue);
         return;
       case AmfRulesPackage.TRANSITION__TARGET:
         setTarget((State)newValue);
         return;
-      case AmfRulesPackage.TRANSITION__CHANNEL:
-        setChannel((Channel)newValue);
+      case AmfRulesPackage.TRANSITION__EVENT:
+        setEvent((Event)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -319,17 +319,17 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case AmfRulesPackage.TRANSITION__EVENT:
-        setEvent(EVENT_EDEFAULT);
-        return;
       case AmfRulesPackage.TRANSITION__SOURCE:
         setSource((State)null);
+        return;
+      case AmfRulesPackage.TRANSITION__CHANNEL:
+        setChannel((Channel)null);
         return;
       case AmfRulesPackage.TRANSITION__TARGET:
         setTarget((State)null);
         return;
-      case AmfRulesPackage.TRANSITION__CHANNEL:
-        setChannel((Channel)null);
+      case AmfRulesPackage.TRANSITION__EVENT:
+        setEvent(EVENT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -345,14 +345,14 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case AmfRulesPackage.TRANSITION__EVENT:
-        return event != EVENT_EDEFAULT;
       case AmfRulesPackage.TRANSITION__SOURCE:
         return source != null;
-      case AmfRulesPackage.TRANSITION__TARGET:
-        return target != null;
       case AmfRulesPackage.TRANSITION__CHANNEL:
         return channel != null;
+      case AmfRulesPackage.TRANSITION__TARGET:
+        return target != null;
+      case AmfRulesPackage.TRANSITION__EVENT:
+        return event != EVENT_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

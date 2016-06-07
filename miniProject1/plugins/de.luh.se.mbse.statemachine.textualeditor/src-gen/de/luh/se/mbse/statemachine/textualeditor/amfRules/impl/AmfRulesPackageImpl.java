@@ -276,9 +276,9 @@ public class AmfRulesPackageImpl extends EPackageImpl implements AmfRulesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTransition_Event()
+  public EReference getTransition_Source()
   {
-    return (EAttribute)transitionEClass.getEStructuralFeatures().get(0);
+    return (EReference)transitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -286,7 +286,7 @@ public class AmfRulesPackageImpl extends EPackageImpl implements AmfRulesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransition_Source()
+  public EReference getTransition_Channel()
   {
     return (EReference)transitionEClass.getEStructuralFeatures().get(1);
   }
@@ -306,9 +306,9 @@ public class AmfRulesPackageImpl extends EPackageImpl implements AmfRulesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransition_Channel()
+  public EAttribute getTransition_Event()
   {
-    return (EReference)transitionEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)transitionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -397,10 +397,10 @@ public class AmfRulesPackageImpl extends EPackageImpl implements AmfRulesPackage
     createEAttribute(channelEClass, CHANNEL__NAME);
 
     transitionEClass = createEClass(TRANSITION);
-    createEAttribute(transitionEClass, TRANSITION__EVENT);
     createEReference(transitionEClass, TRANSITION__SOURCE);
-    createEReference(transitionEClass, TRANSITION__TARGET);
     createEReference(transitionEClass, TRANSITION__CHANNEL);
+    createEReference(transitionEClass, TRANSITION__TARGET);
+    createEAttribute(transitionEClass, TRANSITION__EVENT);
 
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__NAME);
@@ -457,10 +457,10 @@ public class AmfRulesPackageImpl extends EPackageImpl implements AmfRulesPackage
     initEAttribute(getChannel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Channel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTransition_Event(), this.getEvent(), "event", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_Source(), this.getState(), null, "source", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransition_Target(), this.getState(), null, "target", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_Channel(), this.getChannel(), null, "channel", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransition_Target(), this.getState(), null, "target", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTransition_Event(), this.getEvent(), "event", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

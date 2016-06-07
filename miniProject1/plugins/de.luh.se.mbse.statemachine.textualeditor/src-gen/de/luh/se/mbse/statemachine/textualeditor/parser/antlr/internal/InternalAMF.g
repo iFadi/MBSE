@@ -477,38 +477,29 @@ ruleTransition returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getTransitionAccess().getTransitionKeyword_1());
 		}
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getLeftCurlyBracketKeyword_2());
-		}
 		(
-			otherlv_3='Label'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getLabelKeyword_3_0());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_3_1_0());
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTransitionRule());
 					}
-					lv_event_4_0=ruleEvent
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTransitionRule());
-						}
-						set(
-							$current,
-							"event",
-							lv_event_4_0,
-							"de.luh.se.mbse.statemachine.textualeditor.AMF.Event");
-						afterParserOrEnumRuleCall();
-					}
-				)
+				}
+				{
+					newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_2_0());
+				}
+				ruleEString
+				{
+					afterParserOrEnumRuleCall();
+				}
 			)
-		)?
-		otherlv_5='Source'
+		)
+		otherlv_3='->'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getTransitionAccess().getSourceKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getHyphenMinusGreaterThanSignKeyword_3());
+		}
+		otherlv_4='('
+		{
+			newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getLeftParenthesisKeyword_4());
 		}
 		(
 			(
@@ -518,7 +509,7 @@ ruleTransition returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getTransitionAccess().getSourceStateCrossReference_5_0());
+					newCompositeNode(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_5_0());
 				}
 				ruleEString
 				{
@@ -526,9 +517,9 @@ ruleTransition returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_7='Target'
+		otherlv_6=')'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getTransitionAccess().getTargetKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getTransitionAccess().getRightParenthesisKeyword_6());
 		}
 		(
 			(
@@ -546,30 +537,25 @@ ruleTransition returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_9='Channel'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getTransitionAccess().getChannelKeyword_8());
-		}
 		(
 			(
 				{
+					newCompositeNode(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_8_0());
+				}
+				lv_event_8_0=ruleEvent
+				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTransitionRule());
+						$current = createModelElementForParent(grammarAccess.getTransitionRule());
 					}
-				}
-				{
-					newCompositeNode(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_9_0());
-				}
-				ruleEString
-				{
+					set(
+						$current,
+						"event",
+						lv_event_8_0,
+						"de.luh.se.mbse.statemachine.textualeditor.AMF.Event");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_11='}'
-		{
-			newLeafNode(otherlv_11, grammarAccess.getTransitionAccess().getRightCurlyBracketKeyword_10());
-		}
 	)
 ;
 

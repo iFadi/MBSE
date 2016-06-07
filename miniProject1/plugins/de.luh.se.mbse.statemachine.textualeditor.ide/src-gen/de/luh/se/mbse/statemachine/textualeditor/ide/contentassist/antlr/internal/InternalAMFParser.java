@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAMFParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Synchronous'", "'Asynchronous'", "'SEND'", "'RECEIVE'", "'Network'", "'{'", "'}'", "'Statemachine'", "'init'", "'Channel'", "'Transition'", "'Source'", "'Target'", "'Label'", "'State'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Synchronous'", "'Asynchronous'", "'SEND'", "'RECEIVE'", "'Network'", "'{'", "'}'", "'Statemachine'", "'init'", "'Channel'", "'Transition'", "'->'", "'('", "')'", "'State'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -3204,7 +3204,7 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
             // InternalAMF.g:1057:1: ( rule__Transition__Group__1__Impl rule__Transition__Group__2 )
             // InternalAMF.g:1058:2: rule__Transition__Group__1__Impl rule__Transition__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_3);
             rule__Transition__Group__1__Impl();
 
             state._fsp--;
@@ -3308,21 +3308,31 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__2__Impl"
-    // InternalAMF.g:1092:1: rule__Transition__Group__2__Impl : ( '{' ) ;
+    // InternalAMF.g:1092:1: rule__Transition__Group__2__Impl : ( ( rule__Transition__SourceAssignment_2 ) ) ;
     public final void rule__Transition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1096:1: ( ( '{' ) )
-            // InternalAMF.g:1097:1: ( '{' )
+            // InternalAMF.g:1096:1: ( ( ( rule__Transition__SourceAssignment_2 ) ) )
+            // InternalAMF.g:1097:1: ( ( rule__Transition__SourceAssignment_2 ) )
             {
-            // InternalAMF.g:1097:1: ( '{' )
-            // InternalAMF.g:1098:2: '{'
+            // InternalAMF.g:1097:1: ( ( rule__Transition__SourceAssignment_2 ) )
+            // InternalAMF.g:1098:2: ( rule__Transition__SourceAssignment_2 )
             {
-             before(grammarAccess.getTransitionAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,16,FOLLOW_2); 
-             after(grammarAccess.getTransitionAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getTransitionAccess().getSourceAssignment_2()); 
+            // InternalAMF.g:1099:2: ( rule__Transition__SourceAssignment_2 )
+            // InternalAMF.g:1099:3: rule__Transition__SourceAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Transition__SourceAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTransitionAccess().getSourceAssignment_2()); 
 
             }
 
@@ -3354,7 +3364,7 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
             // InternalAMF.g:1111:1: ( rule__Transition__Group__3__Impl rule__Transition__Group__4 )
             // InternalAMF.g:1112:2: rule__Transition__Group__3__Impl rule__Transition__Group__4
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Transition__Group__3__Impl();
 
             state._fsp--;
@@ -3383,42 +3393,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__3__Impl"
-    // InternalAMF.g:1119:1: rule__Transition__Group__3__Impl : ( ( rule__Transition__Group_3__0 )? ) ;
+    // InternalAMF.g:1119:1: rule__Transition__Group__3__Impl : ( '->' ) ;
     public final void rule__Transition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1123:1: ( ( ( rule__Transition__Group_3__0 )? ) )
-            // InternalAMF.g:1124:1: ( ( rule__Transition__Group_3__0 )? )
+            // InternalAMF.g:1123:1: ( ( '->' ) )
+            // InternalAMF.g:1124:1: ( '->' )
             {
-            // InternalAMF.g:1124:1: ( ( rule__Transition__Group_3__0 )? )
-            // InternalAMF.g:1125:2: ( rule__Transition__Group_3__0 )?
+            // InternalAMF.g:1124:1: ( '->' )
+            // InternalAMF.g:1125:2: '->'
             {
-             before(grammarAccess.getTransitionAccess().getGroup_3()); 
-            // InternalAMF.g:1126:2: ( rule__Transition__Group_3__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==24) ) {
-                alt9=1;
-            }
-            switch (alt9) {
-                case 1 :
-                    // InternalAMF.g:1126:3: rule__Transition__Group_3__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Transition__Group_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getTransitionAccess().getGroup_3()); 
+             before(grammarAccess.getTransitionAccess().getHyphenMinusGreaterThanSignKeyword_3()); 
+            match(input,22,FOLLOW_2); 
+             after(grammarAccess.getTransitionAccess().getHyphenMinusGreaterThanSignKeyword_3()); 
 
             }
 
@@ -3479,21 +3468,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__4__Impl"
-    // InternalAMF.g:1146:1: rule__Transition__Group__4__Impl : ( 'Source' ) ;
+    // InternalAMF.g:1146:1: rule__Transition__Group__4__Impl : ( '(' ) ;
     public final void rule__Transition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1150:1: ( ( 'Source' ) )
-            // InternalAMF.g:1151:1: ( 'Source' )
+            // InternalAMF.g:1150:1: ( ( '(' ) )
+            // InternalAMF.g:1151:1: ( '(' )
             {
-            // InternalAMF.g:1151:1: ( 'Source' )
-            // InternalAMF.g:1152:2: 'Source'
+            // InternalAMF.g:1151:1: ( '(' )
+            // InternalAMF.g:1152:2: '('
             {
-             before(grammarAccess.getTransitionAccess().getSourceKeyword_4()); 
-            match(input,22,FOLLOW_2); 
-             after(grammarAccess.getTransitionAccess().getSourceKeyword_4()); 
+             before(grammarAccess.getTransitionAccess().getLeftParenthesisKeyword_4()); 
+            match(input,23,FOLLOW_2); 
+             after(grammarAccess.getTransitionAccess().getLeftParenthesisKeyword_4()); 
 
             }
 
@@ -3525,7 +3514,7 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
             // InternalAMF.g:1165:1: ( rule__Transition__Group__5__Impl rule__Transition__Group__6 )
             // InternalAMF.g:1166:2: rule__Transition__Group__5__Impl rule__Transition__Group__6
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__Transition__Group__5__Impl();
 
             state._fsp--;
@@ -3554,31 +3543,31 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__5__Impl"
-    // InternalAMF.g:1173:1: rule__Transition__Group__5__Impl : ( ( rule__Transition__SourceAssignment_5 ) ) ;
+    // InternalAMF.g:1173:1: rule__Transition__Group__5__Impl : ( ( rule__Transition__ChannelAssignment_5 ) ) ;
     public final void rule__Transition__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1177:1: ( ( ( rule__Transition__SourceAssignment_5 ) ) )
-            // InternalAMF.g:1178:1: ( ( rule__Transition__SourceAssignment_5 ) )
+            // InternalAMF.g:1177:1: ( ( ( rule__Transition__ChannelAssignment_5 ) ) )
+            // InternalAMF.g:1178:1: ( ( rule__Transition__ChannelAssignment_5 ) )
             {
-            // InternalAMF.g:1178:1: ( ( rule__Transition__SourceAssignment_5 ) )
-            // InternalAMF.g:1179:2: ( rule__Transition__SourceAssignment_5 )
+            // InternalAMF.g:1178:1: ( ( rule__Transition__ChannelAssignment_5 ) )
+            // InternalAMF.g:1179:2: ( rule__Transition__ChannelAssignment_5 )
             {
-             before(grammarAccess.getTransitionAccess().getSourceAssignment_5()); 
-            // InternalAMF.g:1180:2: ( rule__Transition__SourceAssignment_5 )
-            // InternalAMF.g:1180:3: rule__Transition__SourceAssignment_5
+             before(grammarAccess.getTransitionAccess().getChannelAssignment_5()); 
+            // InternalAMF.g:1180:2: ( rule__Transition__ChannelAssignment_5 )
+            // InternalAMF.g:1180:3: rule__Transition__ChannelAssignment_5
             {
             pushFollow(FOLLOW_2);
-            rule__Transition__SourceAssignment_5();
+            rule__Transition__ChannelAssignment_5();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransitionAccess().getSourceAssignment_5()); 
+             after(grammarAccess.getTransitionAccess().getChannelAssignment_5()); 
 
             }
 
@@ -3639,21 +3628,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__6__Impl"
-    // InternalAMF.g:1200:1: rule__Transition__Group__6__Impl : ( 'Target' ) ;
+    // InternalAMF.g:1200:1: rule__Transition__Group__6__Impl : ( ')' ) ;
     public final void rule__Transition__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1204:1: ( ( 'Target' ) )
-            // InternalAMF.g:1205:1: ( 'Target' )
+            // InternalAMF.g:1204:1: ( ( ')' ) )
+            // InternalAMF.g:1205:1: ( ')' )
             {
-            // InternalAMF.g:1205:1: ( 'Target' )
-            // InternalAMF.g:1206:2: 'Target'
+            // InternalAMF.g:1205:1: ( ')' )
+            // InternalAMF.g:1206:2: ')'
             {
-             before(grammarAccess.getTransitionAccess().getTargetKeyword_6()); 
-            match(input,23,FOLLOW_2); 
-             after(grammarAccess.getTransitionAccess().getTargetKeyword_6()); 
+             before(grammarAccess.getTransitionAccess().getRightParenthesisKeyword_6()); 
+            match(input,24,FOLLOW_2); 
+             after(grammarAccess.getTransitionAccess().getRightParenthesisKeyword_6()); 
 
             }
 
@@ -3685,7 +3674,7 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
             // InternalAMF.g:1219:1: ( rule__Transition__Group__7__Impl rule__Transition__Group__8 )
             // InternalAMF.g:1220:2: rule__Transition__Group__7__Impl rule__Transition__Group__8
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_19);
             rule__Transition__Group__7__Impl();
 
             state._fsp--;
@@ -3761,22 +3750,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__8"
-    // InternalAMF.g:1242:1: rule__Transition__Group__8 : rule__Transition__Group__8__Impl rule__Transition__Group__9 ;
+    // InternalAMF.g:1242:1: rule__Transition__Group__8 : rule__Transition__Group__8__Impl ;
     public final void rule__Transition__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1246:1: ( rule__Transition__Group__8__Impl rule__Transition__Group__9 )
-            // InternalAMF.g:1247:2: rule__Transition__Group__8__Impl rule__Transition__Group__9
+            // InternalAMF.g:1246:1: ( rule__Transition__Group__8__Impl )
+            // InternalAMF.g:1247:2: rule__Transition__Group__8__Impl
             {
-            pushFollow(FOLLOW_3);
-            rule__Transition__Group__8__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Transition__Group__9();
+            rule__Transition__Group__8__Impl();
 
             state._fsp--;
 
@@ -3799,21 +3783,31 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__8__Impl"
-    // InternalAMF.g:1254:1: rule__Transition__Group__8__Impl : ( 'Channel' ) ;
+    // InternalAMF.g:1253:1: rule__Transition__Group__8__Impl : ( ( rule__Transition__EventAssignment_8 ) ) ;
     public final void rule__Transition__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1258:1: ( ( 'Channel' ) )
-            // InternalAMF.g:1259:1: ( 'Channel' )
+            // InternalAMF.g:1257:1: ( ( ( rule__Transition__EventAssignment_8 ) ) )
+            // InternalAMF.g:1258:1: ( ( rule__Transition__EventAssignment_8 ) )
             {
-            // InternalAMF.g:1259:1: ( 'Channel' )
-            // InternalAMF.g:1260:2: 'Channel'
+            // InternalAMF.g:1258:1: ( ( rule__Transition__EventAssignment_8 ) )
+            // InternalAMF.g:1259:2: ( rule__Transition__EventAssignment_8 )
             {
-             before(grammarAccess.getTransitionAccess().getChannelKeyword_8()); 
-            match(input,20,FOLLOW_2); 
-             after(grammarAccess.getTransitionAccess().getChannelKeyword_8()); 
+             before(grammarAccess.getTransitionAccess().getEventAssignment_8()); 
+            // InternalAMF.g:1260:2: ( rule__Transition__EventAssignment_8 )
+            // InternalAMF.g:1260:3: rule__Transition__EventAssignment_8
+            {
+            pushFollow(FOLLOW_2);
+            rule__Transition__EventAssignment_8();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTransitionAccess().getEventAssignment_8()); 
 
             }
 
@@ -3835,325 +3829,15 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Transition__Group__8__Impl"
 
 
-    // $ANTLR start "rule__Transition__Group__9"
-    // InternalAMF.g:1269:1: rule__Transition__Group__9 : rule__Transition__Group__9__Impl rule__Transition__Group__10 ;
-    public final void rule__Transition__Group__9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1273:1: ( rule__Transition__Group__9__Impl rule__Transition__Group__10 )
-            // InternalAMF.g:1274:2: rule__Transition__Group__9__Impl rule__Transition__Group__10
-            {
-            pushFollow(FOLLOW_7);
-            rule__Transition__Group__9__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Transition__Group__10();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group__9"
-
-
-    // $ANTLR start "rule__Transition__Group__9__Impl"
-    // InternalAMF.g:1281:1: rule__Transition__Group__9__Impl : ( ( rule__Transition__ChannelAssignment_9 ) ) ;
-    public final void rule__Transition__Group__9__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1285:1: ( ( ( rule__Transition__ChannelAssignment_9 ) ) )
-            // InternalAMF.g:1286:1: ( ( rule__Transition__ChannelAssignment_9 ) )
-            {
-            // InternalAMF.g:1286:1: ( ( rule__Transition__ChannelAssignment_9 ) )
-            // InternalAMF.g:1287:2: ( rule__Transition__ChannelAssignment_9 )
-            {
-             before(grammarAccess.getTransitionAccess().getChannelAssignment_9()); 
-            // InternalAMF.g:1288:2: ( rule__Transition__ChannelAssignment_9 )
-            // InternalAMF.g:1288:3: rule__Transition__ChannelAssignment_9
-            {
-            pushFollow(FOLLOW_2);
-            rule__Transition__ChannelAssignment_9();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTransitionAccess().getChannelAssignment_9()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group__9__Impl"
-
-
-    // $ANTLR start "rule__Transition__Group__10"
-    // InternalAMF.g:1296:1: rule__Transition__Group__10 : rule__Transition__Group__10__Impl ;
-    public final void rule__Transition__Group__10() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1300:1: ( rule__Transition__Group__10__Impl )
-            // InternalAMF.g:1301:2: rule__Transition__Group__10__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Transition__Group__10__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group__10"
-
-
-    // $ANTLR start "rule__Transition__Group__10__Impl"
-    // InternalAMF.g:1307:1: rule__Transition__Group__10__Impl : ( '}' ) ;
-    public final void rule__Transition__Group__10__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1311:1: ( ( '}' ) )
-            // InternalAMF.g:1312:1: ( '}' )
-            {
-            // InternalAMF.g:1312:1: ( '}' )
-            // InternalAMF.g:1313:2: '}'
-            {
-             before(grammarAccess.getTransitionAccess().getRightCurlyBracketKeyword_10()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getTransitionAccess().getRightCurlyBracketKeyword_10()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group__10__Impl"
-
-
-    // $ANTLR start "rule__Transition__Group_3__0"
-    // InternalAMF.g:1323:1: rule__Transition__Group_3__0 : rule__Transition__Group_3__0__Impl rule__Transition__Group_3__1 ;
-    public final void rule__Transition__Group_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1327:1: ( rule__Transition__Group_3__0__Impl rule__Transition__Group_3__1 )
-            // InternalAMF.g:1328:2: rule__Transition__Group_3__0__Impl rule__Transition__Group_3__1
-            {
-            pushFollow(FOLLOW_18);
-            rule__Transition__Group_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Transition__Group_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__0"
-
-
-    // $ANTLR start "rule__Transition__Group_3__0__Impl"
-    // InternalAMF.g:1335:1: rule__Transition__Group_3__0__Impl : ( 'Label' ) ;
-    public final void rule__Transition__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1339:1: ( ( 'Label' ) )
-            // InternalAMF.g:1340:1: ( 'Label' )
-            {
-            // InternalAMF.g:1340:1: ( 'Label' )
-            // InternalAMF.g:1341:2: 'Label'
-            {
-             before(grammarAccess.getTransitionAccess().getLabelKeyword_3_0()); 
-            match(input,24,FOLLOW_2); 
-             after(grammarAccess.getTransitionAccess().getLabelKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__Transition__Group_3__1"
-    // InternalAMF.g:1350:1: rule__Transition__Group_3__1 : rule__Transition__Group_3__1__Impl ;
-    public final void rule__Transition__Group_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1354:1: ( rule__Transition__Group_3__1__Impl )
-            // InternalAMF.g:1355:2: rule__Transition__Group_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Transition__Group_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__1"
-
-
-    // $ANTLR start "rule__Transition__Group_3__1__Impl"
-    // InternalAMF.g:1361:1: rule__Transition__Group_3__1__Impl : ( ( rule__Transition__EventAssignment_3_1 ) ) ;
-    public final void rule__Transition__Group_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1365:1: ( ( ( rule__Transition__EventAssignment_3_1 ) ) )
-            // InternalAMF.g:1366:1: ( ( rule__Transition__EventAssignment_3_1 ) )
-            {
-            // InternalAMF.g:1366:1: ( ( rule__Transition__EventAssignment_3_1 ) )
-            // InternalAMF.g:1367:2: ( rule__Transition__EventAssignment_3_1 )
-            {
-             before(grammarAccess.getTransitionAccess().getEventAssignment_3_1()); 
-            // InternalAMF.g:1368:2: ( rule__Transition__EventAssignment_3_1 )
-            // InternalAMF.g:1368:3: rule__Transition__EventAssignment_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Transition__EventAssignment_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTransitionAccess().getEventAssignment_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__1__Impl"
-
-
     // $ANTLR start "rule__State__Group__0"
-    // InternalAMF.g:1377:1: rule__State__Group__0 : rule__State__Group__0__Impl rule__State__Group__1 ;
+    // InternalAMF.g:1269:1: rule__State__Group__0 : rule__State__Group__0__Impl rule__State__Group__1 ;
     public final void rule__State__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1381:1: ( rule__State__Group__0__Impl rule__State__Group__1 )
-            // InternalAMF.g:1382:2: rule__State__Group__0__Impl rule__State__Group__1
+            // InternalAMF.g:1273:1: ( rule__State__Group__0__Impl rule__State__Group__1 )
+            // InternalAMF.g:1274:2: rule__State__Group__0__Impl rule__State__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__State__Group__0__Impl();
@@ -4184,21 +3868,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__0__Impl"
-    // InternalAMF.g:1389:1: rule__State__Group__0__Impl : ( () ) ;
+    // InternalAMF.g:1281:1: rule__State__Group__0__Impl : ( () ) ;
     public final void rule__State__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1393:1: ( ( () ) )
-            // InternalAMF.g:1394:1: ( () )
+            // InternalAMF.g:1285:1: ( ( () ) )
+            // InternalAMF.g:1286:1: ( () )
             {
-            // InternalAMF.g:1394:1: ( () )
-            // InternalAMF.g:1395:2: ()
+            // InternalAMF.g:1286:1: ( () )
+            // InternalAMF.g:1287:2: ()
             {
              before(grammarAccess.getStateAccess().getStateAction_0()); 
-            // InternalAMF.g:1396:2: ()
-            // InternalAMF.g:1396:3: 
+            // InternalAMF.g:1288:2: ()
+            // InternalAMF.g:1288:3: 
             {
             }
 
@@ -4221,14 +3905,14 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__1"
-    // InternalAMF.g:1404:1: rule__State__Group__1 : rule__State__Group__1__Impl rule__State__Group__2 ;
+    // InternalAMF.g:1296:1: rule__State__Group__1 : rule__State__Group__1__Impl rule__State__Group__2 ;
     public final void rule__State__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1408:1: ( rule__State__Group__1__Impl rule__State__Group__2 )
-            // InternalAMF.g:1409:2: rule__State__Group__1__Impl rule__State__Group__2
+            // InternalAMF.g:1300:1: ( rule__State__Group__1__Impl rule__State__Group__2 )
+            // InternalAMF.g:1301:2: rule__State__Group__1__Impl rule__State__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__State__Group__1__Impl();
@@ -4259,17 +3943,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__1__Impl"
-    // InternalAMF.g:1416:1: rule__State__Group__1__Impl : ( 'State' ) ;
+    // InternalAMF.g:1308:1: rule__State__Group__1__Impl : ( 'State' ) ;
     public final void rule__State__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1420:1: ( ( 'State' ) )
-            // InternalAMF.g:1421:1: ( 'State' )
+            // InternalAMF.g:1312:1: ( ( 'State' ) )
+            // InternalAMF.g:1313:1: ( 'State' )
             {
-            // InternalAMF.g:1421:1: ( 'State' )
-            // InternalAMF.g:1422:2: 'State'
+            // InternalAMF.g:1313:1: ( 'State' )
+            // InternalAMF.g:1314:2: 'State'
             {
              before(grammarAccess.getStateAccess().getStateKeyword_1()); 
             match(input,25,FOLLOW_2); 
@@ -4296,14 +3980,14 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__2"
-    // InternalAMF.g:1431:1: rule__State__Group__2 : rule__State__Group__2__Impl ;
+    // InternalAMF.g:1323:1: rule__State__Group__2 : rule__State__Group__2__Impl ;
     public final void rule__State__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1435:1: ( rule__State__Group__2__Impl )
-            // InternalAMF.g:1436:2: rule__State__Group__2__Impl
+            // InternalAMF.g:1327:1: ( rule__State__Group__2__Impl )
+            // InternalAMF.g:1328:2: rule__State__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__State__Group__2__Impl();
@@ -4329,21 +4013,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__2__Impl"
-    // InternalAMF.g:1442:1: rule__State__Group__2__Impl : ( ( rule__State__NameAssignment_2 ) ) ;
+    // InternalAMF.g:1334:1: rule__State__Group__2__Impl : ( ( rule__State__NameAssignment_2 ) ) ;
     public final void rule__State__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1446:1: ( ( ( rule__State__NameAssignment_2 ) ) )
-            // InternalAMF.g:1447:1: ( ( rule__State__NameAssignment_2 ) )
+            // InternalAMF.g:1338:1: ( ( ( rule__State__NameAssignment_2 ) ) )
+            // InternalAMF.g:1339:1: ( ( rule__State__NameAssignment_2 ) )
             {
-            // InternalAMF.g:1447:1: ( ( rule__State__NameAssignment_2 ) )
-            // InternalAMF.g:1448:2: ( rule__State__NameAssignment_2 )
+            // InternalAMF.g:1339:1: ( ( rule__State__NameAssignment_2 ) )
+            // InternalAMF.g:1340:2: ( rule__State__NameAssignment_2 )
             {
              before(grammarAccess.getStateAccess().getNameAssignment_2()); 
-            // InternalAMF.g:1449:2: ( rule__State__NameAssignment_2 )
-            // InternalAMF.g:1449:3: rule__State__NameAssignment_2
+            // InternalAMF.g:1341:2: ( rule__State__NameAssignment_2 )
+            // InternalAMF.g:1341:3: rule__State__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__State__NameAssignment_2();
@@ -4376,17 +4060,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Network__NameAssignment_1"
-    // InternalAMF.g:1458:1: rule__Network__NameAssignment_1 : ( ruleEString ) ;
+    // InternalAMF.g:1350:1: rule__Network__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Network__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1462:1: ( ( ruleEString ) )
-            // InternalAMF.g:1463:2: ( ruleEString )
+            // InternalAMF.g:1354:1: ( ( ruleEString ) )
+            // InternalAMF.g:1355:2: ( ruleEString )
             {
-            // InternalAMF.g:1463:2: ( ruleEString )
-            // InternalAMF.g:1464:3: ruleEString
+            // InternalAMF.g:1355:2: ( ruleEString )
+            // InternalAMF.g:1356:3: ruleEString
             {
              before(grammarAccess.getNetworkAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4417,17 +4101,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Network__ChannelAssignment_3_0"
-    // InternalAMF.g:1473:1: rule__Network__ChannelAssignment_3_0 : ( ruleChannel ) ;
+    // InternalAMF.g:1365:1: rule__Network__ChannelAssignment_3_0 : ( ruleChannel ) ;
     public final void rule__Network__ChannelAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1477:1: ( ( ruleChannel ) )
-            // InternalAMF.g:1478:2: ( ruleChannel )
+            // InternalAMF.g:1369:1: ( ( ruleChannel ) )
+            // InternalAMF.g:1370:2: ( ruleChannel )
             {
-            // InternalAMF.g:1478:2: ( ruleChannel )
-            // InternalAMF.g:1479:3: ruleChannel
+            // InternalAMF.g:1370:2: ( ruleChannel )
+            // InternalAMF.g:1371:3: ruleChannel
             {
              before(grammarAccess.getNetworkAccess().getChannelChannelParserRuleCall_3_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4458,17 +4142,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Network__ChannelAssignment_3_1"
-    // InternalAMF.g:1488:1: rule__Network__ChannelAssignment_3_1 : ( ruleChannel ) ;
+    // InternalAMF.g:1380:1: rule__Network__ChannelAssignment_3_1 : ( ruleChannel ) ;
     public final void rule__Network__ChannelAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1492:1: ( ( ruleChannel ) )
-            // InternalAMF.g:1493:2: ( ruleChannel )
+            // InternalAMF.g:1384:1: ( ( ruleChannel ) )
+            // InternalAMF.g:1385:2: ( ruleChannel )
             {
-            // InternalAMF.g:1493:2: ( ruleChannel )
-            // InternalAMF.g:1494:3: ruleChannel
+            // InternalAMF.g:1385:2: ( ruleChannel )
+            // InternalAMF.g:1386:3: ruleChannel
             {
              before(grammarAccess.getNetworkAccess().getChannelChannelParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4499,17 +4183,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Network__StatemachineAssignment_4_0"
-    // InternalAMF.g:1503:1: rule__Network__StatemachineAssignment_4_0 : ( ruleStatemachine ) ;
+    // InternalAMF.g:1395:1: rule__Network__StatemachineAssignment_4_0 : ( ruleStatemachine ) ;
     public final void rule__Network__StatemachineAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1507:1: ( ( ruleStatemachine ) )
-            // InternalAMF.g:1508:2: ( ruleStatemachine )
+            // InternalAMF.g:1399:1: ( ( ruleStatemachine ) )
+            // InternalAMF.g:1400:2: ( ruleStatemachine )
             {
-            // InternalAMF.g:1508:2: ( ruleStatemachine )
-            // InternalAMF.g:1509:3: ruleStatemachine
+            // InternalAMF.g:1400:2: ( ruleStatemachine )
+            // InternalAMF.g:1401:3: ruleStatemachine
             {
              before(grammarAccess.getNetworkAccess().getStatemachineStatemachineParserRuleCall_4_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4540,17 +4224,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Network__StatemachineAssignment_4_1"
-    // InternalAMF.g:1518:1: rule__Network__StatemachineAssignment_4_1 : ( ruleStatemachine ) ;
+    // InternalAMF.g:1410:1: rule__Network__StatemachineAssignment_4_1 : ( ruleStatemachine ) ;
     public final void rule__Network__StatemachineAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1522:1: ( ( ruleStatemachine ) )
-            // InternalAMF.g:1523:2: ( ruleStatemachine )
+            // InternalAMF.g:1414:1: ( ( ruleStatemachine ) )
+            // InternalAMF.g:1415:2: ( ruleStatemachine )
             {
-            // InternalAMF.g:1523:2: ( ruleStatemachine )
-            // InternalAMF.g:1524:3: ruleStatemachine
+            // InternalAMF.g:1415:2: ( ruleStatemachine )
+            // InternalAMF.g:1416:3: ruleStatemachine
             {
              before(grammarAccess.getNetworkAccess().getStatemachineStatemachineParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4581,17 +4265,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__NameAssignment_2"
-    // InternalAMF.g:1533:1: rule__Statemachine__NameAssignment_2 : ( ruleEString ) ;
+    // InternalAMF.g:1425:1: rule__Statemachine__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Statemachine__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1537:1: ( ( ruleEString ) )
-            // InternalAMF.g:1538:2: ( ruleEString )
+            // InternalAMF.g:1429:1: ( ( ruleEString ) )
+            // InternalAMF.g:1430:2: ( ruleEString )
             {
-            // InternalAMF.g:1538:2: ( ruleEString )
-            // InternalAMF.g:1539:3: ruleEString
+            // InternalAMF.g:1430:2: ( ruleEString )
+            // InternalAMF.g:1431:3: ruleEString
             {
              before(grammarAccess.getStatemachineAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4622,21 +4306,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__InitialstateAssignment_5"
-    // InternalAMF.g:1548:1: rule__Statemachine__InitialstateAssignment_5 : ( ( ruleEString ) ) ;
+    // InternalAMF.g:1440:1: rule__Statemachine__InitialstateAssignment_5 : ( ( ruleEString ) ) ;
     public final void rule__Statemachine__InitialstateAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1552:1: ( ( ( ruleEString ) ) )
-            // InternalAMF.g:1553:2: ( ( ruleEString ) )
+            // InternalAMF.g:1444:1: ( ( ( ruleEString ) ) )
+            // InternalAMF.g:1445:2: ( ( ruleEString ) )
             {
-            // InternalAMF.g:1553:2: ( ( ruleEString ) )
-            // InternalAMF.g:1554:3: ( ruleEString )
+            // InternalAMF.g:1445:2: ( ( ruleEString ) )
+            // InternalAMF.g:1446:3: ( ruleEString )
             {
              before(grammarAccess.getStatemachineAccess().getInitialstateStateCrossReference_5_0()); 
-            // InternalAMF.g:1555:3: ( ruleEString )
-            // InternalAMF.g:1556:4: ruleEString
+            // InternalAMF.g:1447:3: ( ruleEString )
+            // InternalAMF.g:1448:4: ruleEString
             {
              before(grammarAccess.getStatemachineAccess().getInitialstateStateEStringParserRuleCall_5_0_1()); 
             pushFollow(FOLLOW_2);
@@ -4671,17 +4355,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__StateAssignment_6_0"
-    // InternalAMF.g:1567:1: rule__Statemachine__StateAssignment_6_0 : ( ruleState ) ;
+    // InternalAMF.g:1459:1: rule__Statemachine__StateAssignment_6_0 : ( ruleState ) ;
     public final void rule__Statemachine__StateAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1571:1: ( ( ruleState ) )
-            // InternalAMF.g:1572:2: ( ruleState )
+            // InternalAMF.g:1463:1: ( ( ruleState ) )
+            // InternalAMF.g:1464:2: ( ruleState )
             {
-            // InternalAMF.g:1572:2: ( ruleState )
-            // InternalAMF.g:1573:3: ruleState
+            // InternalAMF.g:1464:2: ( ruleState )
+            // InternalAMF.g:1465:3: ruleState
             {
              before(grammarAccess.getStatemachineAccess().getStateStateParserRuleCall_6_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4712,17 +4396,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__StateAssignment_6_1"
-    // InternalAMF.g:1582:1: rule__Statemachine__StateAssignment_6_1 : ( ruleState ) ;
+    // InternalAMF.g:1474:1: rule__Statemachine__StateAssignment_6_1 : ( ruleState ) ;
     public final void rule__Statemachine__StateAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1586:1: ( ( ruleState ) )
-            // InternalAMF.g:1587:2: ( ruleState )
+            // InternalAMF.g:1478:1: ( ( ruleState ) )
+            // InternalAMF.g:1479:2: ( ruleState )
             {
-            // InternalAMF.g:1587:2: ( ruleState )
-            // InternalAMF.g:1588:3: ruleState
+            // InternalAMF.g:1479:2: ( ruleState )
+            // InternalAMF.g:1480:3: ruleState
             {
              before(grammarAccess.getStatemachineAccess().getStateStateParserRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4753,17 +4437,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__TransitionAssignment_7_0"
-    // InternalAMF.g:1597:1: rule__Statemachine__TransitionAssignment_7_0 : ( ruleTransition ) ;
+    // InternalAMF.g:1489:1: rule__Statemachine__TransitionAssignment_7_0 : ( ruleTransition ) ;
     public final void rule__Statemachine__TransitionAssignment_7_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1601:1: ( ( ruleTransition ) )
-            // InternalAMF.g:1602:2: ( ruleTransition )
+            // InternalAMF.g:1493:1: ( ( ruleTransition ) )
+            // InternalAMF.g:1494:2: ( ruleTransition )
             {
-            // InternalAMF.g:1602:2: ( ruleTransition )
-            // InternalAMF.g:1603:3: ruleTransition
+            // InternalAMF.g:1494:2: ( ruleTransition )
+            // InternalAMF.g:1495:3: ruleTransition
             {
              before(grammarAccess.getStatemachineAccess().getTransitionTransitionParserRuleCall_7_0_0()); 
             pushFollow(FOLLOW_2);
@@ -4794,17 +4478,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__TransitionAssignment_7_1"
-    // InternalAMF.g:1612:1: rule__Statemachine__TransitionAssignment_7_1 : ( ruleTransition ) ;
+    // InternalAMF.g:1504:1: rule__Statemachine__TransitionAssignment_7_1 : ( ruleTransition ) ;
     public final void rule__Statemachine__TransitionAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1616:1: ( ( ruleTransition ) )
-            // InternalAMF.g:1617:2: ( ruleTransition )
+            // InternalAMF.g:1508:1: ( ( ruleTransition ) )
+            // InternalAMF.g:1509:2: ( ruleTransition )
             {
-            // InternalAMF.g:1617:2: ( ruleTransition )
-            // InternalAMF.g:1618:3: ruleTransition
+            // InternalAMF.g:1509:2: ( ruleTransition )
+            // InternalAMF.g:1510:3: ruleTransition
             {
              before(grammarAccess.getStatemachineAccess().getTransitionTransitionParserRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4835,17 +4519,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Channel__TypeAssignment_1"
-    // InternalAMF.g:1627:1: rule__Channel__TypeAssignment_1 : ( ruleTypeOfChannel ) ;
+    // InternalAMF.g:1519:1: rule__Channel__TypeAssignment_1 : ( ruleTypeOfChannel ) ;
     public final void rule__Channel__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1631:1: ( ( ruleTypeOfChannel ) )
-            // InternalAMF.g:1632:2: ( ruleTypeOfChannel )
+            // InternalAMF.g:1523:1: ( ( ruleTypeOfChannel ) )
+            // InternalAMF.g:1524:2: ( ruleTypeOfChannel )
             {
-            // InternalAMF.g:1632:2: ( ruleTypeOfChannel )
-            // InternalAMF.g:1633:3: ruleTypeOfChannel
+            // InternalAMF.g:1524:2: ( ruleTypeOfChannel )
+            // InternalAMF.g:1525:3: ruleTypeOfChannel
             {
              before(grammarAccess.getChannelAccess().getTypeTypeOfChannelEnumRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4876,17 +4560,17 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Channel__NameAssignment_3"
-    // InternalAMF.g:1642:1: rule__Channel__NameAssignment_3 : ( ruleEString ) ;
+    // InternalAMF.g:1534:1: rule__Channel__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__Channel__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1646:1: ( ( ruleEString ) )
-            // InternalAMF.g:1647:2: ( ruleEString )
+            // InternalAMF.g:1538:1: ( ( ruleEString ) )
+            // InternalAMF.g:1539:2: ( ruleEString )
             {
-            // InternalAMF.g:1647:2: ( ruleEString )
-            // InternalAMF.g:1648:3: ruleEString
+            // InternalAMF.g:1539:2: ( ruleEString )
+            // InternalAMF.g:1540:3: ruleEString
             {
              before(grammarAccess.getChannelAccess().getNameEStringParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -4916,75 +4600,34 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Channel__NameAssignment_3"
 
 
-    // $ANTLR start "rule__Transition__EventAssignment_3_1"
-    // InternalAMF.g:1657:1: rule__Transition__EventAssignment_3_1 : ( ruleEvent ) ;
-    public final void rule__Transition__EventAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Transition__SourceAssignment_2"
+    // InternalAMF.g:1549:1: rule__Transition__SourceAssignment_2 : ( ( ruleEString ) ) ;
+    public final void rule__Transition__SourceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1661:1: ( ( ruleEvent ) )
-            // InternalAMF.g:1662:2: ( ruleEvent )
+            // InternalAMF.g:1553:1: ( ( ( ruleEString ) ) )
+            // InternalAMF.g:1554:2: ( ( ruleEString ) )
             {
-            // InternalAMF.g:1662:2: ( ruleEvent )
-            // InternalAMF.g:1663:3: ruleEvent
+            // InternalAMF.g:1554:2: ( ( ruleEString ) )
+            // InternalAMF.g:1555:3: ( ruleEString )
             {
-             before(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEvent();
-
-            state._fsp--;
-
-             after(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__EventAssignment_3_1"
-
-
-    // $ANTLR start "rule__Transition__SourceAssignment_5"
-    // InternalAMF.g:1672:1: rule__Transition__SourceAssignment_5 : ( ( ruleEString ) ) ;
-    public final void rule__Transition__SourceAssignment_5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAMF.g:1676:1: ( ( ( ruleEString ) ) )
-            // InternalAMF.g:1677:2: ( ( ruleEString ) )
+             before(grammarAccess.getTransitionAccess().getSourceStateCrossReference_2_0()); 
+            // InternalAMF.g:1556:3: ( ruleEString )
+            // InternalAMF.g:1557:4: ruleEString
             {
-            // InternalAMF.g:1677:2: ( ( ruleEString ) )
-            // InternalAMF.g:1678:3: ( ruleEString )
-            {
-             before(grammarAccess.getTransitionAccess().getSourceStateCrossReference_5_0()); 
-            // InternalAMF.g:1679:3: ( ruleEString )
-            // InternalAMF.g:1680:4: ruleEString
-            {
-             before(grammarAccess.getTransitionAccess().getSourceStateEStringParserRuleCall_5_0_1()); 
+             before(grammarAccess.getTransitionAccess().getSourceStateEStringParserRuleCall_2_0_1()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getTransitionAccess().getSourceStateEStringParserRuleCall_5_0_1()); 
+             after(grammarAccess.getTransitionAccess().getSourceStateEStringParserRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getTransitionAccess().getSourceStateCrossReference_5_0()); 
+             after(grammarAccess.getTransitionAccess().getSourceStateCrossReference_2_0()); 
 
             }
 
@@ -5003,25 +4646,74 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Transition__SourceAssignment_5"
+    // $ANTLR end "rule__Transition__SourceAssignment_2"
+
+
+    // $ANTLR start "rule__Transition__ChannelAssignment_5"
+    // InternalAMF.g:1568:1: rule__Transition__ChannelAssignment_5 : ( ( ruleEString ) ) ;
+    public final void rule__Transition__ChannelAssignment_5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalAMF.g:1572:1: ( ( ( ruleEString ) ) )
+            // InternalAMF.g:1573:2: ( ( ruleEString ) )
+            {
+            // InternalAMF.g:1573:2: ( ( ruleEString ) )
+            // InternalAMF.g:1574:3: ( ruleEString )
+            {
+             before(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_5_0()); 
+            // InternalAMF.g:1575:3: ( ruleEString )
+            // InternalAMF.g:1576:4: ruleEString
+            {
+             before(grammarAccess.getTransitionAccess().getChannelChannelEStringParserRuleCall_5_0_1()); 
+            pushFollow(FOLLOW_2);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getTransitionAccess().getChannelChannelEStringParserRuleCall_5_0_1()); 
+
+            }
+
+             after(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Transition__ChannelAssignment_5"
 
 
     // $ANTLR start "rule__Transition__TargetAssignment_7"
-    // InternalAMF.g:1691:1: rule__Transition__TargetAssignment_7 : ( ( ruleEString ) ) ;
+    // InternalAMF.g:1587:1: rule__Transition__TargetAssignment_7 : ( ( ruleEString ) ) ;
     public final void rule__Transition__TargetAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1695:1: ( ( ( ruleEString ) ) )
-            // InternalAMF.g:1696:2: ( ( ruleEString ) )
+            // InternalAMF.g:1591:1: ( ( ( ruleEString ) ) )
+            // InternalAMF.g:1592:2: ( ( ruleEString ) )
             {
-            // InternalAMF.g:1696:2: ( ( ruleEString ) )
-            // InternalAMF.g:1697:3: ( ruleEString )
+            // InternalAMF.g:1592:2: ( ( ruleEString ) )
+            // InternalAMF.g:1593:3: ( ruleEString )
             {
              before(grammarAccess.getTransitionAccess().getTargetStateCrossReference_7_0()); 
-            // InternalAMF.g:1698:3: ( ruleEString )
-            // InternalAMF.g:1699:4: ruleEString
+            // InternalAMF.g:1594:3: ( ruleEString )
+            // InternalAMF.g:1595:4: ruleEString
             {
              before(grammarAccess.getTransitionAccess().getTargetStateEStringParserRuleCall_7_0_1()); 
             pushFollow(FOLLOW_2);
@@ -5055,34 +4747,26 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Transition__TargetAssignment_7"
 
 
-    // $ANTLR start "rule__Transition__ChannelAssignment_9"
-    // InternalAMF.g:1710:1: rule__Transition__ChannelAssignment_9 : ( ( ruleEString ) ) ;
-    public final void rule__Transition__ChannelAssignment_9() throws RecognitionException {
+    // $ANTLR start "rule__Transition__EventAssignment_8"
+    // InternalAMF.g:1606:1: rule__Transition__EventAssignment_8 : ( ruleEvent ) ;
+    public final void rule__Transition__EventAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1714:1: ( ( ( ruleEString ) ) )
-            // InternalAMF.g:1715:2: ( ( ruleEString ) )
+            // InternalAMF.g:1610:1: ( ( ruleEvent ) )
+            // InternalAMF.g:1611:2: ( ruleEvent )
             {
-            // InternalAMF.g:1715:2: ( ( ruleEString ) )
-            // InternalAMF.g:1716:3: ( ruleEString )
+            // InternalAMF.g:1611:2: ( ruleEvent )
+            // InternalAMF.g:1612:3: ruleEvent
             {
-             before(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_9_0()); 
-            // InternalAMF.g:1717:3: ( ruleEString )
-            // InternalAMF.g:1718:4: ruleEString
-            {
-             before(grammarAccess.getTransitionAccess().getChannelChannelEStringParserRuleCall_9_0_1()); 
+             before(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
-            ruleEString();
+            ruleEvent();
 
             state._fsp--;
 
-             after(grammarAccess.getTransitionAccess().getChannelChannelEStringParserRuleCall_9_0_1()); 
-
-            }
-
-             after(grammarAccess.getTransitionAccess().getChannelChannelCrossReference_9_0()); 
+             after(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_8_0()); 
 
             }
 
@@ -5101,21 +4785,21 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Transition__ChannelAssignment_9"
+    // $ANTLR end "rule__Transition__EventAssignment_8"
 
 
     // $ANTLR start "rule__State__NameAssignment_2"
-    // InternalAMF.g:1729:1: rule__State__NameAssignment_2 : ( ruleEString ) ;
+    // InternalAMF.g:1621:1: rule__State__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__State__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAMF.g:1733:1: ( ( ruleEString ) )
-            // InternalAMF.g:1734:2: ( ruleEString )
+            // InternalAMF.g:1625:1: ( ( ruleEString ) )
+            // InternalAMF.g:1626:2: ( ruleEString )
             {
-            // InternalAMF.g:1734:2: ( ruleEString )
-            // InternalAMF.g:1735:3: ruleEString
+            // InternalAMF.g:1626:2: ( ruleEString )
+            // InternalAMF.g:1627:3: ruleEString
             {
              before(grammarAccess.getStateAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -5164,8 +4848,9 @@ public class InternalAMFParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000002000002L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000002200002L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000001400000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000006000L});
 
 }

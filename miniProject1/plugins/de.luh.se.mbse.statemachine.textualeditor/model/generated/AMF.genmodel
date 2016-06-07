@@ -30,10 +30,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMF.ecore#//Channel/name"/>
     </genClasses>
     <genClasses ecoreClass="AMF.ecore#//Transition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMF.ecore#//Transition/event"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AMF.ecore#//Transition/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AMF.ecore#//Transition/target"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AMF.ecore#//Transition/channel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AMF.ecore#//Transition/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMF.ecore#//Transition/event"/>
     </genClasses>
     <genClasses ecoreClass="AMF.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AMF.ecore#//State/name"/>

@@ -115,10 +115,25 @@ public class AMFSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Transition returns Transition
 	 *
 	 * Constraint:
-	 *     (event=Event? source=[State|EString] target=[State|EString] channel=[Channel|EString])
+	 *     (source=[State|EString] channel=[Channel|EString] target=[State|EString] event=Event)
 	 */
 	protected void sequence_Transition(ISerializationContext context, Transition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AmfRulesPackage.Literals.TRANSITION__SOURCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmfRulesPackage.Literals.TRANSITION__SOURCE));
+			if (transientValues.isValueTransient(semanticObject, AmfRulesPackage.Literals.TRANSITION__CHANNEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmfRulesPackage.Literals.TRANSITION__CHANNEL));
+			if (transientValues.isValueTransient(semanticObject, AmfRulesPackage.Literals.TRANSITION__TARGET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmfRulesPackage.Literals.TRANSITION__TARGET));
+			if (transientValues.isValueTransient(semanticObject, AmfRulesPackage.Literals.TRANSITION__EVENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmfRulesPackage.Literals.TRANSITION__EVENT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTransitionAccess().getSourceStateEStringParserRuleCall_2_0_1(), semanticObject.getSource());
+		feeder.accept(grammarAccess.getTransitionAccess().getChannelChannelEStringParserRuleCall_5_0_1(), semanticObject.getChannel());
+		feeder.accept(grammarAccess.getTransitionAccess().getTargetStateEStringParserRuleCall_7_0_1(), semanticObject.getTarget());
+		feeder.accept(grammarAccess.getTransitionAccess().getEventEventEnumRuleCall_8_0(), semanticObject.getEvent());
+		feeder.finish();
 	}
 	
 	

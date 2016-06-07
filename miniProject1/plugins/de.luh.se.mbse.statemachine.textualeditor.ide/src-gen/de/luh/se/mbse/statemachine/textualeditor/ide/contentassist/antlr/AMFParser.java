@@ -46,7 +46,6 @@ public class AMFParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatemachineAccess().getGroup_7(), "rule__Statemachine__Group_7__0");
 					put(grammarAccess.getChannelAccess().getGroup(), "rule__Channel__Group__0");
 					put(grammarAccess.getTransitionAccess().getGroup(), "rule__Transition__Group__0");
-					put(grammarAccess.getTransitionAccess().getGroup_3(), "rule__Transition__Group_3__0");
 					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
 					put(grammarAccess.getNetworkAccess().getNameAssignment_1(), "rule__Network__NameAssignment_1");
 					put(grammarAccess.getNetworkAccess().getChannelAssignment_3_0(), "rule__Network__ChannelAssignment_3_0");
@@ -61,10 +60,10 @@ public class AMFParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatemachineAccess().getTransitionAssignment_7_1(), "rule__Statemachine__TransitionAssignment_7_1");
 					put(grammarAccess.getChannelAccess().getTypeAssignment_1(), "rule__Channel__TypeAssignment_1");
 					put(grammarAccess.getChannelAccess().getNameAssignment_3(), "rule__Channel__NameAssignment_3");
-					put(grammarAccess.getTransitionAccess().getEventAssignment_3_1(), "rule__Transition__EventAssignment_3_1");
-					put(grammarAccess.getTransitionAccess().getSourceAssignment_5(), "rule__Transition__SourceAssignment_5");
+					put(grammarAccess.getTransitionAccess().getSourceAssignment_2(), "rule__Transition__SourceAssignment_2");
+					put(grammarAccess.getTransitionAccess().getChannelAssignment_5(), "rule__Transition__ChannelAssignment_5");
 					put(grammarAccess.getTransitionAccess().getTargetAssignment_7(), "rule__Transition__TargetAssignment_7");
-					put(grammarAccess.getTransitionAccess().getChannelAssignment_9(), "rule__Transition__ChannelAssignment_9");
+					put(grammarAccess.getTransitionAccess().getEventAssignment_8(), "rule__Transition__EventAssignment_8");
 					put(grammarAccess.getStateAccess().getNameAssignment_2(), "rule__State__NameAssignment_2");
 				}
 			};

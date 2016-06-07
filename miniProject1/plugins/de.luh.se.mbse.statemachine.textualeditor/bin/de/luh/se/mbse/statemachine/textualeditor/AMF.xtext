@@ -38,13 +38,7 @@ Channel returns Channel:
 
 Transition returns Transition:
 	{Transition}
-	'Transition'
-	'{'
-		('Label' event=Event)?
-		'Source' source=[State|EString]
-		'Target' target=[State|EString]
-		'Channel' channel=[Channel|EString]
-	'}'
+	'Transition' source=[State|EString] '->' '(' channel=[Channel|EString]  ')' target=[State|EString] event=Event
 ;
 
 enum Event returns Event:

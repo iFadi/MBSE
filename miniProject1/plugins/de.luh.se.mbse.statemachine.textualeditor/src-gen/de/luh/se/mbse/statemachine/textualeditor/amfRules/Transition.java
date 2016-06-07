@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent <em>Event</em>}</li>
  *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getSource <em>Source</em>}</li>
- *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel <em>Channel</em>}</li>
+ *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent <em>Event</em>}</li>
  * </ul>
  *
  * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.AmfRulesPackage#getTransition()
@@ -26,35 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Transition extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Event</b></em>' attribute.
-   * The literals are from the enumeration {@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Event}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Event</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Event</em>' attribute.
-   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Event
-   * @see #setEvent(Event)
-   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.AmfRulesPackage#getTransition_Event()
-   * @model
-   * @generated
-   */
-  Event getEvent();
-
-  /**
-   * Sets the value of the '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent <em>Event</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Event</em>' attribute.
-   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Event
-   * @see #getEvent()
-   * @generated
-   */
-  void setEvent(Event value);
-
   /**
    * Returns the value of the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
@@ -80,6 +51,32 @@ public interface Transition extends EObject
    * @generated
    */
   void setSource(State value);
+
+  /**
+   * Returns the value of the '<em><b>Channel</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Channel</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Channel</em>' reference.
+   * @see #setChannel(Channel)
+   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.AmfRulesPackage#getTransition_Channel()
+   * @model
+   * @generated
+   */
+  Channel getChannel();
+
+  /**
+   * Sets the value of the '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel <em>Channel</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Channel</em>' reference.
+   * @see #getChannel()
+   * @generated
+   */
+  void setChannel(Channel value);
 
   /**
    * Returns the value of the '<em><b>Target</b></em>' reference.
@@ -108,29 +105,32 @@ public interface Transition extends EObject
   void setTarget(State value);
 
   /**
-   * Returns the value of the '<em><b>Channel</b></em>' reference.
+   * Returns the value of the '<em><b>Event</b></em>' attribute.
+   * The literals are from the enumeration {@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Event}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Channel</em>' reference isn't clear,
+   * If the meaning of the '<em>Event</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Channel</em>' reference.
-   * @see #setChannel(Channel)
-   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.AmfRulesPackage#getTransition_Channel()
+   * @return the value of the '<em>Event</em>' attribute.
+   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Event
+   * @see #setEvent(Event)
+   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.AmfRulesPackage#getTransition_Event()
    * @model
    * @generated
    */
-  Channel getChannel();
+  Event getEvent();
 
   /**
-   * Sets the value of the '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel <em>Channel</em>}' reference.
+   * Sets the value of the '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent <em>Event</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Channel</em>' reference.
-   * @see #getChannel()
+   * @param value the new value of the '<em>Event</em>' attribute.
+   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Event
+   * @see #getEvent()
    * @generated
    */
-  void setChannel(Channel value);
+  void setEvent(Event value);
 
 } // Transition

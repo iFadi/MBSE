@@ -207,22 +207,22 @@ public interface AmfRulesPackage extends EPackage
   int TRANSITION = 3;
 
   /**
-   * The feature id for the '<em><b>Event</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRANSITION__EVENT = 0;
-
-  /**
    * The feature id for the '<em><b>Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__SOURCE = 1;
+  int TRANSITION__SOURCE = 0;
+
+  /**
+   * The feature id for the '<em><b>Channel</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION__CHANNEL = 1;
 
   /**
    * The feature id for the '<em><b>Target</b></em>' reference.
@@ -234,13 +234,13 @@ public interface AmfRulesPackage extends EPackage
   int TRANSITION__TARGET = 2;
 
   /**
-   * The feature id for the '<em><b>Channel</b></em>' reference.
+   * The feature id for the '<em><b>Event</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__CHANNEL = 3;
+  int TRANSITION__EVENT = 3;
 
   /**
    * The number of structural features of the '<em>Transition</em>' class.
@@ -440,17 +440,6 @@ public interface AmfRulesPackage extends EPackage
   EClass getTransition();
 
   /**
-   * Returns the meta object for the attribute '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent <em>Event</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Event</em>'.
-   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent()
-   * @see #getTransition()
-   * @generated
-   */
-  EAttribute getTransition_Event();
-
-  /**
    * Returns the meta object for the reference '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -460,6 +449,17 @@ public interface AmfRulesPackage extends EPackage
    * @generated
    */
   EReference getTransition_Source();
+
+  /**
+   * Returns the meta object for the reference '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel <em>Channel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Channel</em>'.
+   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel()
+   * @see #getTransition()
+   * @generated
+   */
+  EReference getTransition_Channel();
 
   /**
    * Returns the meta object for the reference '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getTarget <em>Target</em>}'.
@@ -473,15 +473,15 @@ public interface AmfRulesPackage extends EPackage
   EReference getTransition_Target();
 
   /**
-   * Returns the meta object for the reference '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel <em>Channel</em>}'.
+   * Returns the meta object for the attribute '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Channel</em>'.
-   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getChannel()
+   * @return the meta object for the attribute '<em>Event</em>'.
+   * @see de.luh.se.mbse.statemachine.textualeditor.amfRules.Transition#getEvent()
    * @see #getTransition()
    * @generated
    */
-  EReference getTransition_Channel();
+  EAttribute getTransition_Event();
 
   /**
    * Returns the meta object for class '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.State <em>State</em>}'.
@@ -660,20 +660,20 @@ public interface AmfRulesPackage extends EPackage
     EClass TRANSITION = eINSTANCE.getTransition();
 
     /**
-     * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TRANSITION__EVENT = eINSTANCE.getTransition_Event();
-
-    /**
      * The meta object literal for the '<em><b>Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
+
+    /**
+     * The meta object literal for the '<em><b>Channel</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSITION__CHANNEL = eINSTANCE.getTransition_Channel();
 
     /**
      * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -684,12 +684,12 @@ public interface AmfRulesPackage extends EPackage
     EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
 
     /**
-     * The meta object literal for the '<em><b>Channel</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TRANSITION__CHANNEL = eINSTANCE.getTransition_Channel();
+    EAttribute TRANSITION__EVENT = eINSTANCE.getTransition_Event();
 
     /**
      * The meta object literal for the '{@link de.luh.se.mbse.statemachine.textualeditor.amfRules.impl.StateImpl <em>State</em>}' class.

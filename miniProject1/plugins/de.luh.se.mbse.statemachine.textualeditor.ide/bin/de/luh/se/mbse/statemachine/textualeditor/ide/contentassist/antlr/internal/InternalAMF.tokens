@@ -1,14 +1,14 @@
+'('=23
+')'=24
+'->'=22
 'Asynchronous'=12
 'Channel'=20
-'Label'=24
 'Network'=15
 'RECEIVE'=14
 'SEND'=13
-'Source'=22
 'State'=25
 'Statemachine'=18
 'Synchronous'=11
-'Target'=23
 'Transition'=21
 'init'=19
 '{'=16

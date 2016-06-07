@@ -308,7 +308,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_haOq0yczEeaMQ8rlEzUyCQ"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_haODwyczEeaMQ8rlEzUyCQ" fontName=".SF NS Text" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_haODxCczEeaMQ8rlEzUyCQ" x="300"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_haODxCczEeaMQ8rlEzUyCQ" x="160" y="104"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_haPR4CczEeaMQ8rlEzUyCQ" type="2002" element="_haJLTyczEeaMQ8rlEzUyCQ">
             <children xmi:type="notation:Node" xmi:id="_haP48CczEeaMQ8rlEzUyCQ" type="5006"/>
@@ -382,6 +382,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_haJLSSczEeaMQ8rlEzUyCQ" name="Guest">
         <target xmi:type="amfRules:Statemachine" href="cafe.amf#//@statemachine.0"/>
         <semanticElements xmi:type="amfRules:Statemachine" href="cafe.amf#//@statemachine.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_haJLSiczEeaMQ8rlEzUyCQ" borderSize="1" borderSizeComputationExpression="1">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/de.luh.se.mbse.statemachine.graphicaleditor/description/statemachine.odesign#//@ownedViewpoints[name='Statemachine']/@ownedRepresentations[name='Network']/@defaultLayer/@containerMappings[name='StatemachineContainer']/@style"/>
         </ownedStyle>

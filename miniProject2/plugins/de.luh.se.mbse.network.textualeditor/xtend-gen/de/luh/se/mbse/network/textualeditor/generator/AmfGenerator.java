@@ -4,17 +4,20 @@
 package de.luh.se.mbse.network.textualeditor.generator;
 
 import com.google.common.collect.Iterables;
+import com.google.inject.Inject;
 import de.luh.se.mbse.network.textualeditor.amf.Network;
 import de.luh.se.mbse.network.textualeditor.amf.Statemachine;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
@@ -24,14 +27,20 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
  */
 @SuppressWarnings("all")
 public class AmfGenerator extends AbstractGenerator {
+  @Inject
+  @Extension
+  private IQualifiedNameProvider _iQualifiedNameProvider;
+  
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<Network> _filter = Iterables.<Network>filter(_iterable, Network.class);
     for (final Network network : _filter) {
+      QualifiedName _fullyQualifiedName = this._iQualifiedNameProvider.getFullyQualifiedName(network);
+      String _string = _fullyQualifiedName.toString("/");
       String _name = network.getName();
-      String _plus = ("network/" + _name);
+      String _plus = (_string + _name);
       String _plus_1 = (_plus + ".java");
       CharSequence _compile = this.compile(network);
       fsa.generateFile(_plus_1, _compile);
@@ -42,9 +51,8 @@ public class AmfGenerator extends AbstractGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package ");
     EObject _eContainer = network.eContainer();
-    Resource _eResource = _eContainer.eResource();
-    URI _uRI = _eResource.getURI();
-    _builder.append(_uRI, "");
+    QualifiedName _fullyQualifiedName = this._iQualifiedNameProvider.getFullyQualifiedName(_eContainer);
+    _builder.append(_fullyQualifiedName, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("  ");

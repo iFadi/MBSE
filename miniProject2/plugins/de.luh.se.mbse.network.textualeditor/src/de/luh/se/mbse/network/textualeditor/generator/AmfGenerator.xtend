@@ -8,6 +8,9 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import de.luh.se.mbse.network.textualeditor.amf.Network
+import org.eclipse.xtext.naming.IQualifiedNameProvider
+import com.google.inject.Inject
+
 
 /**
  * Generates code from your model files on save.
@@ -15,16 +18,16 @@ import de.luh.se.mbse.network.textualeditor.amf.Network
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class AmfGenerator extends AbstractGenerator {
-
+	@Inject extension IQualifiedNameProvider
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		for (network : resource.allContents.toIterable.filter(Network)) {
-			fsa.generateFile("network/" + network.name + ".java", network.compile)
+			fsa.generateFile(network.fullyQualifiedName.toString("/") + network.name + ".java", network.compile)
 		}
 	}
 	
 	def compile(Network network) {
 		'''
-  		package «network.eContainer.eResource.URI»;
+  		package «network.eContainer.fullyQualifiedName»;
   
   		public class «network.name» {
   			

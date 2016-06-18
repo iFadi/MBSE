@@ -25,10 +25,12 @@ class AmfGenerator extends AbstractGenerator {
 		}
 	}
 	
-	def compile(Network network) {
+	def compile(Network network) 
 		'''
-  		package «network.eContainer.fullyQualifiedName»;
-  
+		«IF network.eContainer.fullyQualifiedName != null»
+  			package «network.eContainer.fullyQualifiedName»;
+  		«ENDIF»
+  		
   		public class «network.name» {
   			
   			// Statemachine
@@ -38,5 +40,5 @@ class AmfGenerator extends AbstractGenerator {
   			
   		}
 		'''
-	}
+	
 }

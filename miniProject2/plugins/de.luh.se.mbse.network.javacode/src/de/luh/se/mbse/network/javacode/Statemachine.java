@@ -1,3 +1,4 @@
+package de.luh.se.mbse.network.javacode;
 import java.util.ArrayList;
 
 public class Statemachine {
@@ -7,7 +8,9 @@ public class Statemachine {
 	private State currentState;
 	private State initialState;
 	
-	public Statemachine(String name) {
+	public Statemachine(String name, State initialState) {
+		setInitialState(initialState);
+		setName(name);
 		// The current state of each state machine is its initial state.
 		setCurrentState(getInitialState());
 	}

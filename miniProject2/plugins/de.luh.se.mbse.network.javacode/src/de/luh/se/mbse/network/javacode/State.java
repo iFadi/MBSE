@@ -1,3 +1,4 @@
+package de.luh.se.mbse.network.javacode;
 
 public class State {
 

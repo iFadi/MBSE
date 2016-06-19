@@ -21,21 +21,26 @@ class AmfGenerator extends AbstractGenerator {
 	@Inject extension IQualifiedNameProvider
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		for (network : resource.allContents.toIterable.filter(Network)) {
-			fsa.generateFile(network.fullyQualifiedName.toString("/") + network.name + ".java", network.compile)
+			fsa.generateFile("network/" + network.name + ".java", network.compile)
 		}
 	}
 	
 	def compile(Network network) 
 		'''
-		«IF network.eContainer.fullyQualifiedName != null»
-  			package «network.eContainer.fullyQualifiedName»;
-  		«ENDIF»
+«««		«IF network.eContainer.fullyQualifiedName != null»
+  			package network;
+«««  		«ENDIF»
   		
   		public class «network.name» {
   			
-  			// Statemachine
-  			«FOR s : network.statemachine»
+  			// Channels declarations:
+  			«FOR c : network.channel»
+  				«c.type» «c.name» 
+  			«ENDFOR»
   			
+  			// Statemachines in Network
+  			«FOR s : network.statemachine»
+  			    «s.name» 
   			«ENDFOR»
   			
   		}

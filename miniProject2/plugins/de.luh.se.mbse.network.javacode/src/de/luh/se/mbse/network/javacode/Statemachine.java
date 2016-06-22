@@ -5,8 +5,13 @@ public class Statemachine {
 
 	private String name;
 	private ArrayList<State> states;
+	private Transition transition;
 	private State currentState;
 	private State initialState;
+	
+	public Statemachine() {
+		
+	}
 	
 	public Statemachine(String name, State initialState) {
 		setInitialState(initialState);
@@ -49,5 +54,13 @@ public class Statemachine {
 	
 	public void addState(State state) {
 		this.getStates().add(state);
+	}
+
+	public Transition getTransition() {
+		return transition;
+	}
+
+	public void setTransition(Transition transition) {
+		this.transition = transition;
 	}
 }

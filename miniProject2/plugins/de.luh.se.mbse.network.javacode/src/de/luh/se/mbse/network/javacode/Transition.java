@@ -4,11 +4,14 @@ public class Transition {
 
 	private State source;
 	private State target;
+	private Channel channel;
 	private String event;
-	private boolean enabled;
 	
-	public Transition() {
-		
+	public Transition(State source, State target, String event, Channel channel) {
+		setSource(source);
+		setTarget(target);
+		setEvent(event);
+		setChannel(channel);
 	}
 
 	public State getSource() {
@@ -27,19 +30,19 @@ public class Transition {
 		this.target = target;
 	}
 
-	public boolean isEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-	}
-
 	public String getEvent() {
 		return event;
 	}
 
 	public void setEvent(String event) {
 		this.event = event;
+	}
+
+	public Channel getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Channel channel) {
+		this.channel = channel;
 	}
 }

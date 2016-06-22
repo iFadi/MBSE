@@ -8,9 +8,8 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import de.luh.se.mbse.network.textualeditor.amf.Network
-import org.eclipse.xtext.naming.IQualifiedNameProvider
-import com.google.inject.Inject
-
+import de.luh.se.mbse.network.textualeditor.amf.Channel
+import de.luh.se.mbse.network.textualeditor.amf.Statemachine
 
 /**
  * Generates code from your model files on save.
@@ -18,32 +17,116 @@ import com.google.inject.Inject
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class AmfGenerator extends AbstractGenerator {
-	@Inject extension IQualifiedNameProvider
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		for (network : resource.allContents.toIterable.filter(Network)) {
-			fsa.generateFile("network/" + network.name + ".java", network.compile)
+			fsa.generateFile(network.eClass.name+".java", network.compile)			
 		}
 	}
 	
 	def compile(Network network) 
-		'''
-«««		«IF network.eContainer.fullyQualifiedName != null»
-  			package network;
-«««  		«ENDIF»
-  		
-  		public class «network.name» {
-  			
-  			// Channels declarations:
+		'''		  		
+  		public class «network.eClass.name» {
+  			«FOR n : network.statemachine»
+  				String current«n.name»State;
+  			«ENDFOR»
   			«FOR c : network.channel»
-  				«c.type» «c.name» 
+  				int «c.name»Buffer = 0;
+  			«ENDFOR»  			
+  			
+  			
+  			public static void main(String[] args) {
+  				Network «network.eResource.className» = new Network();
+  				«network.eResource.className».initialize();
+  				// make Steps
+  				for (int i=0; i<=2; i++) {
+  					System.out.println("Step " + i + ":" );
+  					«network.eResource.className».makeStep();
+  				}
+  			}
+  			
+  			// initialize method
+  			public void initialize() {
+  				System.out.println("Channel declartions:");
+  				«FOR c : network.channel»
+  					System.out.println("«c.type» «c.name»");
+  				«ENDFOR»
+  				System.out.println("Initializing the network ...");
+  				«FOR s : network.statemachine»
+  				    System.out.println("- «s.name»," + " current State: " + "«s.initialstate.name»");
+  				    current«s.name»State = "«s.initialstate.name»";
+  				«ENDFOR»
+  			}
+  			
+  			// makeStep method
+  			public void makeStep() {
+  				if(isTransitionEnabled()) {
+  					fireTransition();
+  				}
+  			}
+  			
+  			public void fireAsynSendMessage() {
+  				  «FOR s : network.statemachine»
+  				  		  «FOR t : s.transition»
+  				  		  		current«s.name»State = "«t.source.name»";
+  				  		  		«t.channel.name»Buffer++;
+  				  		  		System.out.println("Channel Buffer: " + «t.channel.name»Buffer);		  
+  				  		  «ENDFOR»
+  				  		  System.out.println("current«s.name»State: " + current«s.name»State);
+  				  «ENDFOR»
+  			}
+  			
+  			public boolean isTransitionEnabled() {
+  					return true;
+  			}
+  		}
+		'''
+		
+	def compile(Statemachine statemachine) 
+		'''  		
+  		public class «statemachine.eClass.name» {
+  			String name = «statemachine.name»;
+  			private «statemachine.state» currentState;
+  			
+  			public «statemachine.eClass.name» getCurrentState() {
+  				return currentState;
+  			}
+  			public void setCurrentState(«statemachine.eClass.name» state) {
+  				this.currentState = state;
+  			}
+  			
+  			// attributes
+  			«FOR s : statemachine.state»
+  				private «s.eClass.name» «s.name»; 
   			«ENDFOR»
   			
-  			// Statemachines in Network
-  			«FOR s : network.statemachine»
-  			    «s.name» 
-  			«ENDFOR»
+  			public «statemachine.eClass.name»() {
+  				
+  			}
   			
   		}
 		'''
+	def compile(Channel channel) 
+		'''  		
+  		public class «channel.eClass.name» {
+  			private int bufxfer;
+  			public int getBuffer() {
+  				return buffer;
+  			}
+  			public void setBuffer(int buffer) {
+  				this.buffer = buffer;
+  			}
+
+  			public «channel.eClass.name»() {
+  				    // ASYN mapped to zero.
+  					if(this.getType() == "Asynchronous") {
+  						this.setBuffer(0);
+  					}
+  			}
+  		}
+		'''
+	def className(Resource res) {
+  		var name = res.URI.lastSegment
+  		name.substring(0, name.indexOf('.'))
+ }
 	
 }

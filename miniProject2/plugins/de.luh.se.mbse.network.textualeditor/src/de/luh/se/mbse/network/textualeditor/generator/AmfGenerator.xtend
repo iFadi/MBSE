@@ -10,6 +10,9 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import de.luh.se.mbse.network.textualeditor.amf.Network
 import de.luh.se.mbse.network.textualeditor.amf.Channel
 import de.luh.se.mbse.network.textualeditor.amf.Statemachine
+import de.luh.se.mbse.network.textualeditor.amf.Transition
+import de.luh.se.mbse.network.textualeditor.AbstractAmfRuntimeModule
+import de.luh.se.mbse.network.textualeditor.amf.State
 
 /**
  * Generates code from your model files on save.
@@ -21,24 +24,43 @@ class AmfGenerator extends AbstractGenerator {
 		for (network : resource.allContents.toIterable.filter(Network)) {
 			fsa.generateFile(network.eClass.name+".java", network.compile)			
 		}
+		for (statemachine : resource.allContents.toIterable.filter(Statemachine)) {
+			fsa.generateFile(statemachine.name+".java", statemachine.compile)			
+		}
+		
 	}
 	
 	def compile(Network network) 
 		'''		  		
   		public class «network.eClass.name» {
-  			«FOR n : network.statemachine»
-  				String current«n.name»State;
+  			«FOR sm : network.statemachine»
+  				private «sm.name.toFirstUpper» «sm.name.toFirstLower»;
   			«ENDFOR»
+  			
   			«FOR c : network.channel»
-  				int «c.name»Buffer = 0;
-  			«ENDFOR»  			
-  			
-  			
+  				«FOR t : c.type»
+  					«IF t.getName == "Asynchronous"»
+  						private int «c.name»;
+  						public int get«c.name.toFirstUpper»() {
+  							return «c.name»;	
+  						}
+  						public void increament«c.name.toFirstUpper»() {
+  							«c.name»++;	
+  						}
+  						public void decrement«c.name.toFirstUpper»() {
+  						  	«c.name»--;	
+  						}
+  						int «c.name»Buffer = 0; // ASYN channel buffer mapped to zero
+  					«ENDIF»
+  				«ENDFOR»
+  			«ENDFOR»
+  			  			  			
   			public static void main(String[] args) {
   				Network «network.eResource.className» = new Network();
   				«network.eResource.className».initialize();
+  				System.out.println("Making Steps ...");
   				// make Steps
-  				for (int i=0; i<=2; i++) {
+  				for (int i=0; i<=10; i++) {
   					System.out.println("Step " + i + ":" );
   					«network.eResource.className».makeStep();
   				}
@@ -46,87 +68,99 @@ class AmfGenerator extends AbstractGenerator {
   			
   			// initialize method
   			public void initialize() {
-  				System.out.println("Channel declartions:");
-  				«FOR c : network.channel»
-  					System.out.println("«c.type» «c.name»");
-  				«ENDFOR»
   				System.out.println("Initializing the network ...");
-  				«FOR s : network.statemachine»
-  				    System.out.println("- «s.name»," + " current State: " + "«s.initialstate.name»");
-  				    current«s.name»State = "«s.initialstate.name»";
+  				«FOR sm : network.statemachine»
+  						«sm.name.toFirstLower» = «sm.name.toFirstUpper» ();
+  						current«sm.name»State = "«sm.initialstate.name»"; // The initial State is the current state.
+  						«FOR t : sm.transition»
+  							«sm.name»«t.channel.name» = new String[] {"«t.source.name»", "«t.target.name»",  "«t.event.getName()»", "«t.channel.name»"};
+  						«ENDFOR»
+  						System.out.println("Statemachine: «sm.name» --- Current State: " + current«sm.name»State);		
   				«ENDFOR»
+  				«FOR c : network.channel»
+  					System.out.println("«c.name» Buffer: " + «c.name»Buffer);
+  				«ENDFOR»
+  				System.out.println("");
   			}
   			
   			// makeStep method
   			public void makeStep() {
-  				if(isTransitionEnabled()) {
-  					fireTransition();
-  				}
+  				fireAsyncSendMessage();
+  				fireAsyncReceiveMessage();
+  				//fireSyncMessage();
   			}
   			
-  			public void fireAsynSendMessage() {
-  				  «FOR s : network.statemachine»
-  				  		  «FOR t : s.transition»
-  				  		  		current«s.name»State = "«t.source.name»";
-  				  		  		«t.channel.name»Buffer++;
-  				  		  		System.out.println("Channel Buffer: " + «t.channel.name»Buffer);		  
-  				  		  «ENDFOR»
-  				  		  System.out.println("current«s.name»State: " + current«s.name»State);
+  			public void fireAsyncSendMessage() {
+  				  «FOR sm : network.statemachine»
+  				  	«FOR t : sm.transition»
+  				  		for (int i=0; i<«sm.name»«t.channel.name».length; i++) {
+  				  			if(«sm.name»«t.channel.name»[0] == current«sm.name»State && «sm.name»«t.channel.name»[2] == "SEND") {
+  				  				current«sm.name»State = «sm.name»«t.channel.name»[1]; // fire Transition
+  				  				«t.channel.name»Buffer++; // Buffer increased;
+  				  				System.out.println("Statemachine: «sm.name» --- Current State: " + current«sm.name»State + " Channel buffer: " + «t.channel.name»Buffer);		
+  				  			}
+  				  		}
+«««  				  		«IF t.event.getName == "SEND" && t.source.name == sm.initialstate.name»
+«««  				  			current«sm.name»State = "«t.target.name»"; // Transition fired.
+«««  				  			«t.channel.name»Buffer++; // Buffer increased.
+«««						«ENDIF»		  
+  				  	«ENDFOR»
   				  «ENDFOR»
   			}
   			
-  			public boolean isTransitionEnabled() {
-  					return true;
-  			}
+  			public void fireAsyncReceiveMessage() {
+  			  				  «FOR sm : network.statemachine»
+  			  				  	«FOR t : sm.transition»
+  			  				  		for (int i=0; i<«sm.name»«t.channel.name».length; i++) {
+  			  				  			if(«sm.name»«t.channel.name»[0] == current«sm.name»State && «sm.name»«t.channel.name»[2] == "RECEIVE") {
+  			  				  				current«sm.name»State = «sm.name»«t.channel.name»[1]; // fire Transition
+  			  				  				«t.channel.name»Buffer--; // Buffer increased;
+  			  				  				System.out.println("Statemachine: «sm.name» --- Current State: " + current«sm.name»State + " Channel buffer: " + «t.channel.name»Buffer);		
+  			  				  			}
+  			  				  		}
+  			«««  				  		«IF t.event.getName == "SEND" && t.source.name == sm.initialstate.name»
+  			«««  				  			current«sm.name»State = "«t.target.name»"; // Transition fired.
+  			«««  				  			«t.channel.name»Buffer++; // Buffer increased.
+  			«««						«ENDIF»		  
+  			  				  	«ENDFOR»
+  			  				  «ENDFOR»
+  			  			}
   		}
-		'''
+		'''	
 		
-	def compile(Statemachine statemachine) 
-		'''  		
-  		public class «statemachine.eClass.name» {
-  			String name = «statemachine.name»;
-  			private «statemachine.state» currentState;
-  			
-  			public «statemachine.eClass.name» getCurrentState() {
-  				return currentState;
-  			}
-  			public void setCurrentState(«statemachine.eClass.name» state) {
-  				this.currentState = state;
-  			}
-  			
-  			// attributes
-  			«FOR s : statemachine.state»
-  				private «s.eClass.name» «s.name»; 
-  			«ENDFOR»
-  			
-  			public «statemachine.eClass.name»() {
-  				
-  			}
-  			
-  		}
+	def compile(Statemachine statemachine) {
 		'''
-	def compile(Channel channel) 
-		'''  		
-  		public class «channel.eClass.name» {
-  			private int bufxfer;
-  			public int getBuffer() {
-  				return buffer;
-  			}
-  			public void setBuffer(int buffer) {
-  				this.buffer = buffer;
-  			}
+		public class «statemachine.name» {
+			
+			private String currentState = "«statemachine.initialstate.name»";
+			
+			public «statemachine.name»() {
+					
+			}
+			
+			public void fireTransition() {
+				«FOR s : statemachine.state»
+					«s.fireTransition»
+					«FOR t : statemachine.transition»
+						
+					«ENDFOR»
+				«ENDFOR»	
+			}
+		}
+		'''	
+		}
+	
+	def fireTransition(State state)
+		'''
+		if(currentState == "«state.name»") {
 
-  			public «channel.eClass.name»() {
-  				    // ASYN mapped to zero.
-  					if(this.getType() == "Asynchronous") {
-  						this.setBuffer(0);
-  					}
-  			}
-  		}
-		'''
+		}	
+		'''		
 	def className(Resource res) {
   		var name = res.URI.lastSegment
   		name.substring(0, name.indexOf('.'))
- }
-	
+	 }
+
+
 }
+

@@ -152,10 +152,5 @@ class AmfGenerator extends AbstractGenerator {
 		«val stateMachine = transition.eContainer as Statemachine»
 		System.out.println("«stateMachine.name»: «transition.source.name» ==> «transition.target.name» : [«sync»]«transition.channel.name»");
 		'''
-		
-	def channelTokensGreaterThanZero(Transition transition) 
-		'''
-«««		«network.eClass.name.toFirstUpper»Main.get«transition.channel.name.toFirstUpper»() > 0
-		'''
 }
 

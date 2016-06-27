@@ -13,6 +13,7 @@ import de.luh.se.mbse.network.textualeditor.amf.Statemachine
 import de.luh.se.mbse.network.textualeditor.amf.Transition
 import de.luh.se.mbse.network.textualeditor.AbstractAmfRuntimeModule
 import de.luh.se.mbse.network.textualeditor.amf.State
+import de.luh.se.mbse.network.textualeditor.services.AmfGrammarAccess.TransitionElements
 
 /**
  * Generates code from your model files on save.
@@ -72,6 +73,10 @@ class AmfGenerator extends AbstractGenerator {
   			public void makeStep() {
   				«FOR sm : network.statemachine»
   					«sm.name.toFirstLower».fireTransition();
+  					«FOR t : sm.transition»
+  						«t.output»
+  					«ENDFOR»
+  					System.out.println("«sm.name»: Current State: " + «sm.name.toFirstLower».getCurrentState() + " Channel Buffer: ");
   				«ENDFOR»
   			}
   		}
@@ -97,10 +102,18 @@ class AmfGenerator extends AbstractGenerator {
 			  						
 			public void fireTransition() {
 				«FOR s : statemachine.state»
-					«s.fireTransition»
+				if(getCurrentState() == "«s.name»") {
 					«FOR t : statemachine.transition»
-						«t.enabledTransitions»
+						«IF t.source.name == s.name»
+							if("«t.event.getName»" == "RECEIVE" && Network.«t.channel.name» > 0) {
+								setCurrentState("«t.target.name»");
+								Network.«t.channel.name»--; }
+							else {
+								setCurrentState("«t.target.name»");
+								Network.«t.channel.name»++; }
+						«ENDIF»
 					«ENDFOR»
+				}
 				«ENDFOR»	
 			}
 		}
@@ -110,15 +123,18 @@ class AmfGenerator extends AbstractGenerator {
 		
 	def enabledTransitions(Transition transition)
 		'''
-		«val statemachine = transition.eContainer as Statemachine»
-		«»
-«««		«transition.output»
+
 		'''
 	
-	def fireTransition(State state)
+	def boolean enabled(Transition transition) {
+		
+		return false;
+	}
+		
+	def fireTransition(State state, Transition transition)
 		'''
 		if(getCurrentState() == "«state.name»") {
-			
+			«transition.enabledTransitions»
 		}	
 		'''		
 		
@@ -135,6 +151,11 @@ class AmfGenerator extends AbstractGenerator {
 		«ENDIF»
 		«val stateMachine = transition.eContainer as Statemachine»
 		System.out.println("«stateMachine.name»: «transition.source.name» ==> «transition.target.name» : [«sync»]«transition.channel.name»");
+		'''
+		
+	def channelTokensGreaterThanZero(Transition transition) 
+		'''
+«««		«network.eClass.name.toFirstUpper»Main.get«transition.channel.name.toFirstUpper»() > 0
 		'''
 }
 

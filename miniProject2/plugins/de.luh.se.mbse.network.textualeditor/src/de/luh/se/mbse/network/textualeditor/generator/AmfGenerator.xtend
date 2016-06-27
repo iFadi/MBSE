@@ -37,6 +37,7 @@ class AmfGenerator extends AbstractGenerator {
   			«FOR sm : network.statemachine»
   				private «sm.name.toFirstUpper» «sm.name.toFirstLower»;
   			«ENDFOR»
+  			
   			// Channels declarations
   			«FOR c : network.channel»
   				«FOR t : c.type»

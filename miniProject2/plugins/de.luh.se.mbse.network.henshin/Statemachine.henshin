@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_aP5p0Dx2EeaO7rHxSEUf1g" name="fireTransition" description="">
+  <imports href="network.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_h9g1wDx2EeaO7rHxSEUf1g" name="fireTransition">
+    <lhs xmi:id="_h-1rcDx2EeaO7rHxSEUf1g" name="Lhs">
+      <nodes xmi:id="_jgr4sDx2EeaO7rHxSEUf1g" outgoing="_pI76oDx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Statemachine"/>
+      </nodes>
+      <nodes xmi:id="_lYThoDx2EeaO7rHxSEUf1g" incoming="_zbo5gDx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//State"/>
+      </nodes>
+      <nodes xmi:id="_lxEm8Dx2EeaO7rHxSEUf1g" incoming="_pI76oDx2EeaO7rHxSEUf1g _z5tVkDx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//State"/>
+      </nodes>
+      <nodes xmi:id="_mPQ-0Dx2EeaO7rHxSEUf1g" outgoing="_zbo5gDx2EeaO7rHxSEUf1g _z5tVkDx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_pI76oDx2EeaO7rHxSEUf1g" source="_jgr4sDx2EeaO7rHxSEUf1g" target="_lxEm8Dx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Statemachine/initState"/>
+      </edges>
+      <edges xmi:id="_zbo5gDx2EeaO7rHxSEUf1g" source="_mPQ-0Dx2EeaO7rHxSEUf1g" target="_lYThoDx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Transition/source"/>
+      </edges>
+      <edges xmi:id="_z5tVkDx2EeaO7rHxSEUf1g" source="_mPQ-0Dx2EeaO7rHxSEUf1g" target="_lxEm8Dx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Transition/target"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_h-1rcTx2EeaO7rHxSEUf1g" name="Rhs">
+      <nodes xmi:id="_jgr4sTx2EeaO7rHxSEUf1g" outgoing="_nQ-TcDx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Statemachine"/>
+      </nodes>
+      <nodes xmi:id="_lYThoTx2EeaO7rHxSEUf1g" incoming="_nQ-TcDx2EeaO7rHxSEUf1g _zbo5gTx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//State"/>
+      </nodes>
+      <nodes xmi:id="_lxFOADx2EeaO7rHxSEUf1g" incoming="_z5tVkTx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//State"/>
+      </nodes>
+      <nodes xmi:id="_mPRl4Dx2EeaO7rHxSEUf1g" outgoing="_zbo5gTx2EeaO7rHxSEUf1g _z5tVkTx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_nQ-TcDx2EeaO7rHxSEUf1g" source="_jgr4sTx2EeaO7rHxSEUf1g" target="_lYThoTx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Statemachine/initState"/>
+      </edges>
+      <edges xmi:id="_zbo5gTx2EeaO7rHxSEUf1g" source="_mPRl4Dx2EeaO7rHxSEUf1g" target="_lYThoTx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Transition/source"/>
+      </edges>
+      <edges xmi:id="_z5tVkTx2EeaO7rHxSEUf1g" source="_mPRl4Dx2EeaO7rHxSEUf1g" target="_lxFOADx2EeaO7rHxSEUf1g">
+        <type href="network.ecore#//Transition/target"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_jgtt4Dx2EeaO7rHxSEUf1g" origin="_jgr4sDx2EeaO7rHxSEUf1g" image="_jgr4sTx2EeaO7rHxSEUf1g"/>
+    <mappings xmi:id="_lYThojx2EeaO7rHxSEUf1g" origin="_lYThoDx2EeaO7rHxSEUf1g" image="_lYThoTx2EeaO7rHxSEUf1g"/>
+    <mappings xmi:id="_lxFOATx2EeaO7rHxSEUf1g" origin="_lxEm8Dx2EeaO7rHxSEUf1g" image="_lxFOADx2EeaO7rHxSEUf1g"/>
+    <mappings xmi:id="_mPRl4Tx2EeaO7rHxSEUf1g" origin="_mPQ-0Dx2EeaO7rHxSEUf1g" image="_mPRl4Dx2EeaO7rHxSEUf1g"/>
+  </units>
+</henshin:Module>

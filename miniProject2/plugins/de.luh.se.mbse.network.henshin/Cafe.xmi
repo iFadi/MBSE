@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network:Network
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:network="http://www.example.org/network"
+    xsi:schemaLocation="http://www.example.org/network ../de.luh.se.mbse.network/model/network.ecore"
+    name="Cafe">
+  <statemachine
+      name="Guest"
+      initState="//@statemachine.0/@state.0">
+    <state name="waiting"/>
+    <state name="drinking coffee"/>
+    <transition
+        source="//@statemachine.0/@state.0"
+        target="//@statemachine.0/@state.0"
+        channel="//@channel.0"/>
+    <transition
+        source="//@statemachine.0/@state.0"
+        target="//@statemachine.0/@state.1"
+        Event="RECEIVE"
+        channel="//@channel.1"/>
+    <transition
+        source="//@statemachine.0/@state.1"
+        target="//@statemachine.0/@state.0"
+        channel="//@channel.2"/>
+  </statemachine>
+  <statemachine
+      name="Waiter">
+    <state name="waiting"/>
+    <state name="preparing coffee"/>
+    <state name="waiting for payment"/>
+    <transition
+        source="//@statemachine.1/@state.0"
+        target="//@statemachine.1/@state.1"
+        Event="RECEIVE"
+        channel="//@channel.0"/>
+    <transition
+        source="//@statemachine.1/@state.1"
+        target="//@statemachine.1/@state.2"
+        channel="//@channel.1"/>
+    <transition
+        source="//@statemachine.1/@state.2"
+        target="//@statemachine.1/@state.0"
+        Event="RECEIVE"
+        channel="//@channel.2"/>
+  </statemachine>
+  <channel name="orderCoffee"
+      Type="Asynchronous"/>
+  <channel name="deliverCoffee"
+      Type="Asynchronous"/>
+  <channel name="payCoffee"
+      Type="Asynchronous"/>
+</network:Network>

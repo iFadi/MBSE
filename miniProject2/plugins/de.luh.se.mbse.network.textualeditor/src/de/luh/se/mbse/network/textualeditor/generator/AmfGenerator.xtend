@@ -8,12 +8,9 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import de.luh.se.mbse.network.textualeditor.amf.Network
-import de.luh.se.mbse.network.textualeditor.amf.Channel
 import de.luh.se.mbse.network.textualeditor.amf.Statemachine
 import de.luh.se.mbse.network.textualeditor.amf.Transition
-import de.luh.se.mbse.network.textualeditor.AbstractAmfRuntimeModule
 import de.luh.se.mbse.network.textualeditor.amf.State
-import de.luh.se.mbse.network.textualeditor.services.AmfGrammarAccess.TransitionElements
 
 /**
  * Generates code from your model files on save.
@@ -23,22 +20,24 @@ import de.luh.se.mbse.network.textualeditor.services.AmfGrammarAccess.Transition
 class AmfGenerator extends AbstractGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		for (network : resource.allContents.toIterable.filter(Network)) {
-			fsa.generateFile(network.eClass.name+".java", network.compile)			
+			fsa.generateFile("de/luh/se/mbse/codegenerator/examples/" + network.eResource.className + "/" + network.eClass.name+".java", network.compile)			
 		}
 		for (statemachine : resource.allContents.toIterable.filter(Statemachine)) {
-			fsa.generateFile(statemachine.name+".java", statemachine.compile)			
+			fsa.generateFile("de/luh/se/mbse/codegenerator/examples/" + statemachine.eResource.className + "/" + statemachine.name+".java", statemachine.compile)			
 		}		
 	}
 	
 	def compile(Network network) 
 		'''		  		
+  		package de.luh.se.mbse.codegenerator.examples.«network.eResource.className»;
+  		
   		public class «network.eClass.name» {
   			 // Statemachines in the network
   			«FOR sm : network.statemachine»
   				private «sm.name.toFirstUpper» «sm.name.toFirstLower»;
   			«ENDFOR»
   			
-  			// Channels declarations
+  			// Async channels declarations for buffer
   			«FOR c : network.channel»
   				«FOR t : c.type»
   					«IF t.getName == "Asynchronous"»
@@ -46,15 +45,16 @@ class AmfGenerator extends AbstractGenerator {
   					«ENDIF»
   				«ENDFOR»
   			«ENDFOR»
-  			  			  			
+  			  			  			  			
   			public static void main(String[] args) {
   				Network «network.eResource.className» = new Network();
   				«network.eResource.className».initialize();
   				
   				System.out.println("Running the network ...");
-  				for (int i=0; i<=10; i++) {
-  					System.out.println("Step " + i + ":" );
+  				for (int i=1; i<=20; i++) { // LOOP of Steps.
+  					System.out.println("Global Execution State - Step " + i + ":" );
   					«network.eResource.className».makeStep();
+  					System.out.println(" ---- ");
   				}
   			}
   			
@@ -62,22 +62,22 @@ class AmfGenerator extends AbstractGenerator {
   			public void initialize() {
   				System.out.println("Initializing the network ...");
   				«FOR sm : network.statemachine»
-  						«sm.name.toFirstLower» = new «sm.name.toFirstUpper»(); // The initial State is the current state.
+  						«sm.name.toFirstLower» = new «sm.name.toFirstUpper»(); // initializing the object and set the initial state as current state.
   				«ENDFOR»
   				
   				«FOR c : network.channel»
-  					«c.name» = 0; // // ASYN channel buffer mapped to zero.
+  				  «FOR t : c.type»
+  				  	«IF t.getName == "Asynchronous"»
+  				  		«c.name» = 0; // Mapping asynchronous channel to zero.					
+  				  	«ENDIF»
+  				  «ENDFOR»
   				«ENDFOR»
   			}
   			
-  			// makeStep method
+  			// start running the network.
   			public void makeStep() {
   				«FOR sm : network.statemachine»
-  					«sm.name.toFirstLower».fireTransition();
-  					«FOR t : sm.transition»
-  						«t.output»
-  					«ENDFOR»
-  					System.out.println("«sm.name»: Current State: " + «sm.name.toFirstLower».getCurrentState() + " Channel Buffer: ");
+  					«sm.name.toFirstLower».fireTransitions();
   				«ENDFOR»
   			}
   		}
@@ -85,12 +85,34 @@ class AmfGenerator extends AbstractGenerator {
 		
 	def compile(Statemachine statemachine) {
 		'''
+		package de.luh.se.mbse.codegenerator.examples.«statemachine.eResource.className»;
+		
+		import java.util.Arrays;
+		import java.util.ArrayList;
+		import java.util.HashMap;
+		import java.util.List;
+		
 		public class «statemachine.name» {
-			
 			private String currentState;
+			private HashMap<Integer,List<String>> transition;
+			private ArrayList<String> enabledTransitions;
 			
 			public «statemachine.name»() {
-				 setCurrentState("«statemachine.initialstate.name»");
+				 transition = new HashMap<Integer, List<String>>();
+				 enabledTransitions = new ArrayList<String>();
+				 
+				 «var i=0»
+				 «FOR s : statemachine.state»
+				 	«FOR t : statemachine.transition»
+				 		«IF s.name == t.source.name»
+				 			transition.put(«i++», Arrays.asList("«t.source.name»","«t.target.name»","«t.channel.name»","«t.event.getName»"));
+				 		«ENDIF»
+				 	«ENDFOR»
+				 «ENDFOR»
+				 
+				 setCurrentState("«statemachine.initialstate.name»"); // Set initial state as current state.
+				 setEnabledTransitions(); // Outgoing transitions are enabled.
+				 
 			}
 			
 			public String getCurrentState() {
@@ -101,27 +123,103 @@ class AmfGenerator extends AbstractGenerator {
 				currentState = state;	
 			}
 			  						
-			public void fireTransition() {
-				«FOR s : statemachine.state»
-				if(getCurrentState() == "«s.name»") {
-					«FOR t : statemachine.transition»
-						«IF t.source.name == s.name»
-							if("«t.event.getName»" == "RECEIVE" && Network.«t.channel.name» > 0) {
-								setCurrentState("«t.target.name»");
-								Network.«t.channel.name»--; }
-							else {
-								setCurrentState("«t.target.name»");
-								Network.«t.channel.name»++; }
-						«ENDIF»
-					«ENDFOR»
+			public void fireTransitions() {
+«««				for(int j=0; j<enabledTransitions.size(); j++) {
+				for(Integer i : transition.keySet()) {
+					«IF statemachine.isAsyncChannel»
+					if(transition.get(i).get(3) == "SEND" && transition.get(i).get(0) == getCurrentState()) { // Send over Asyn channel
+						System.out.println("Statemachine: «statemachine.name» - " + getCurrentState() + " ==> " + transition.get(i).get(1) + " (" + transition.get(i).get(2)+" Buffer: " + getChannelBuffer(transition.get(i).get(2)) +")");
+						setCurrentState(transition.get(i).get(1));
+						increment(transition.get(i).get(2));
+					}
+					if(transition.get(i).get(3) == "RECEIVE" && getChannelBuffer(transition.get(i).get(2)) > 0) { // Receive over Asyn channel
+						System.out.println("Statemachine: «statemachine.name» - " + getCurrentState() + " ==> " + transition.get(i).get(1) + " (" + transition.get(i).get(2)+" Buffer: " + getChannelBuffer(transition.get(i).get(2)) +")");
+						setCurrentState(transition.get(i).get(1));
+						decrement(transition.get(i).get(2));
+					}
+					«ENDIF»
+					«IF statemachine.isSyncChannel»
+					if(transition.get(i).get(3) == "SEND" && transition.get(i).get(0) == getCurrentState()) { // Send over Sync channel
+						System.out.println("Statemachine: «statemachine.name» - " + getCurrentState() + " ==> " + transition.get(i).get(1) + " (" + transition.get(i).get(2)+")");
+						setCurrentState(transition.get(i).get(1));
+					}
+					if(transition.get(i).get(3) == "RECEIVE" && enabledTransitions.contains(transition.get(i).get(2))) { // Receive over Sync channel
+						System.out.println("Statemachine: «statemachine.name» - " + getCurrentState() + " ==> " + transition.get(i).get(1) + " (" + transition.get(i).get(2)+")");
+						setCurrentState(transition.get(i).get(1));
+					}
+					«ENDIF»
+«««				}
 				}
-				«ENDFOR»	
+				enabledTransitions.clear();
+				setEnabledTransitions();
 			}
+			
+			public void setEnabledTransitions() {
+				for (Integer key : transition.keySet()) {
+					if(getCurrentState() == transition.get(key).get(0)) {
+						enabledTransitions.add(transition.get(key).get(2));
+					}
+				}
+			}
+
+			«IF statemachine.isAsyncChannel»
+			public void increment(String channel) {
+				«FOR t : statemachine.transition»
+				«IF t.channel.type.toString == "[Asynchronous]"»
+				 	if(channel == "«t.channel.name»") {
+				 		Network.«t.channel.name»++;
+				 	}
+				 «ENDIF»
+				«ENDFOR»
+			}
+			«ENDIF»
+			
+			«IF statemachine.isAsyncChannel»
+			public void decrement(String channel) {
+				«FOR t : statemachine.transition»
+				«IF t.channel.type.toString == "[Asynchronous]"»
+				 	if(channel == "«t.channel.name»") {
+				 		Network.«t.channel.name»--; 
+				 	}
+				 «ENDIF»
+				«ENDFOR»
+			}
+			«ENDIF»
+			
+			«IF statemachine.isAsyncChannel»
+			public int getChannelBuffer(String channel) {
+				«FOR t : statemachine.transition»
+				«IF t.channel.type.toString == "[Asynchronous]"»
+				if(channel == "«t.channel.name»") {
+					return Network.«t.channel.name»;
+				}
+				«ENDIF»
+				«ENDFOR»
+				else {
+					return 0;	
+				}
+			}
+			«ENDIF»
 		}
 		'''	
 		}
 		
-		
+	def boolean isAsyncChannel(Statemachine statemachine) {
+		for (t : statemachine.transition) {
+			if (t.channel.type.toString == "[Asynchronous]") {
+				return true
+			}
+		}
+	}
+	
+	def boolean isSyncChannel(Statemachine statemachine) {
+		for (t : statemachine.transition) {
+			if (t.channel.type.toString == "[Synchronous]") {
+				return true
+			}
+		}
+	}	
+	
 	def enabledTransitions(Transition transition)
 		'''
 
@@ -132,7 +230,7 @@ class AmfGenerator extends AbstractGenerator {
 		return false;
 	}
 		
-	def fireTransition(State state, Transition transition)
+	def fireTransitions(State state, Transition transition)
 		'''
 		if(getCurrentState() == "«state.name»") {
 			«transition.enabledTransitions»

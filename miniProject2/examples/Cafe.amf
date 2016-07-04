@@ -1,0 +1,27 @@
+Network Cafe {                     
+	Asynchronous Channel orderCoffee
+	Asynchronous Channel deliverCoffee
+	Asynchronous Channel payCoffee
+	                                                                                 
+	Statemachine Guest {
+		init waiting
+		                                                                                                       
+		State waiting
+		State drinkingCoffe
+		                                          
+		Transition waiting -> (deliverCoffee) drinkingCoffe RECEIVE
+		Transition drinkingCoffe -> (payCoffee) waiting SEND
+		Transition waiting -> (orderCoffee) waiting SEND
+	}
+	Statemachine Waiter {
+		init waiting 
+		
+		State waiting 
+		State preparingCoffee 
+		State waitingForPayment 
+		
+		Transition waiting -> (orderCoffee) preparingCoffee RECEIVE
+		Transition preparingCoffee -> (deliverCoffee) waitingForPayment SEND
+		Transition waitingForPayment -> (payCoffee) waiting RECEIVE
+	}
+}

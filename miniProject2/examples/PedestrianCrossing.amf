@@ -1,0 +1,89 @@
+Network PedestrainCrossing {   
+	
+	Synchronous Channel pressButton
+	Asynchronous Channel pedestrainRequest
+	Asynchronous Channel Ready
+	Synchronous Channel pedestrainTurnGreen
+	Synchronous Channel pedestrainTurnedGreen
+	Synchronous Channel pedestrainTurnRed
+	Synchronous Channel pedestrainTurnedRed
+	Synchronous Channel trafficTurnGreen
+	Synchronous Channel trafficTurnedGreen
+	Synchronous Channel trafficTurnRed
+	Synchronous Channel trafficTurnedRed
+		                 
+	Statemachine Pedestrain {
+		init waiting 		  	
+		State waiting
+		
+		Transition waiting -> (pressButton) waiting SEND
+ 
+	}
+	
+	Statemachine CrossingControl {
+		init initial
+			
+		State initial
+		State pedestrainRequestReceived
+		State turningTrafficLightsRed
+		State trafficLightsTurnedRed
+		State turningPedestrainLightsGreen
+		State pedestrainLightsTurnedGreen
+		State turningPedestrainLightsRed
+		State pedestrainLightsTurnedRed
+		State turningTrafficLightsGreen
+		State anotherInitial
+	
+		Transition initial -> (pedestrainRequest) pedestrainRequestReceived RECEIVE
+		Transition pedestrainRequestReceived -> (trafficTurnRed) turningTrafficLightsRed RECEIVE
+		Transition trafficLightsTurnedRed -> (pedestrainTurnedGreen) turningPedestrainLightsGreen SEND
+		Transition turningPedestrainLightsGreen -> (pedestrainTurnedGreen) pedestrainLightsTurnedGreen RECEIVE
+		Transition pedestrainLightsTurnedGreen -> (pedestrainTurnGreen) turningPedestrainLightsRed SEND
+		Transition turningPedestrainLightsRed -> (pedestrainTurnedRed) pedestrainLightsTurnedRed RECEIVE
+		Transition pedestrainLightsTurnedRed -> (trafficTurnGreen) turningTrafficLightsGreen SEND
+		Transition turningTrafficLightsGreen -> (trafficTurnedGreen) anotherInitial RECEIVE
+		Transition anotherInitial -> (Ready) initial SEND
+	}
+	
+	Statemachine PedestrainUI {
+		init waiting
+			
+		State waiting
+		State buttonPressReceived
+		State waitForGreen
+		
+		Transition waiting -> (pressButton) buttonPressReceived RECEIVE
+		Transition buttonPressReceived -> (pedestrainRequest) waitForGreen SEND
+		Transition waitForGreen -> (pressButton) waitForGreen RECEIVE
+		Transition waitForGreen -> (Ready) waiting RECEIVE
+	
+	}
+	   
+	Statemachine TrafficLight {
+		init green
+
+		State green
+		State turningRed
+		State red
+		State turningGreen
+		
+		Transition green -> (trafficTurnRed) turningRed RECEIVE
+		Transition turningRed -> (trafficTurnedRed) red SEND
+		Transition red -> (trafficTurnGreen) turningGreen RECEIVE
+		Transition turningGreen -> (trafficTurnedGreen) green SEND
+
+	}
+	Statemachine PedestrainLight {
+		init green
+	
+		State green
+		State turningRed
+		State red
+		State turningGreen
+		
+		Transition green -> (pedestrainTurnRed) turningRed RECEIVE
+		Transition turningRed -> (pedestrainTurnedRed) red SEND
+		Transition red -> (pedestrainTurnGreen) turningGreen RECEIVE
+		Transition turningGreen -> (pedestrainTurnedGreen) green SEND
+	}
+}

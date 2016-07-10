@@ -15,19 +15,15 @@
       <genEnumLiterals ecoreEnumLiteral="network.ecore#//Event/RECEIVE"/>
     </genEnums>
     <genClasses ecoreClass="network.ecore#//Network">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Network/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference network.ecore#//Network/statemachine"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference network.ecore#//Network/channel"/>
     </genClasses>
     <genClasses ecoreClass="network.ecore#//Statemachine">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Statemachine/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference network.ecore#//Statemachine/state"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//Statemachine/initState"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference network.ecore#//Statemachine/transition"/>
     </genClasses>
-    <genClasses ecoreClass="network.ecore#//State">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//State/name"/>
-    </genClasses>
+    <genClasses ecoreClass="network.ecore#//State"/>
     <genClasses ecoreClass="network.ecore#//Transition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//Transition/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//Transition/target"/>
@@ -35,7 +31,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//Transition/channel"/>
     </genClasses>
     <genClasses ecoreClass="network.ecore#//Channel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Channel/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Channel/Type"/>
     </genClasses>
     <genClasses ecoreClass="network.ecore#//RunTimeNetwork">
@@ -50,6 +45,9 @@
     </genClasses>
     <genClasses ecoreClass="network.ecore#//ChannelBuffer">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//ChannelBuffer/key"/>
+    </genClasses>
+    <genClasses ecoreClass="network.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//AbstractElement/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
